@@ -5,6 +5,16 @@ body {
     font-family: 'Nunito', sans-serif;
     font-size: 80px;
     font-weight: 700;
+    height: 100%;
     justify-content: center;
     text-align: center;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 0;
 }
