@@ -1,0 +1,9 @@
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    justify-content: center;
+}
