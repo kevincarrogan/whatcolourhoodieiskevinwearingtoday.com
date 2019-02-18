@@ -10,4 +10,5 @@ body {
   margin: 0;
   text-align: center;
   width: 100vw;
+  -webkit-font-smoothing: antialiased;
 }
