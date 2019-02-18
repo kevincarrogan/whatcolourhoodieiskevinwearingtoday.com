@@ -1,13 +1,14 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import Hoodie from '../components/hoodie';
 
 import '../components/main.css';
 
-const IndexPage = ()  => {
-  const colour = 'dim grey';
-  const hex = '696969';
+const IndexPage = ({ data })  => {
+  const colour = data.site.siteMetadata.colour;
+  const hex = data.site.siteMetadata.hex;
 
   return (
     <>
@@ -27,3 +28,14 @@ const IndexPage = ()  => {
 };
 
 export default IndexPage;
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        colour,
+        hex
+      }
+    }
+  }
+`;
