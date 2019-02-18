@@ -1,21 +1,29 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Hoodie from '../components/hoodie';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+import '../components/main.css';
 
-export default IndexPage
+const IndexPage = ()  => {
+  const colour = 'dim grey';
+  const hex = '696969';
+
+  return (
+    <>
+      <Hoodie colour={colour} hex={hex} />
+      <Helmet>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet" />
+        <meta charSet="utf-8" />
+        <title>It's {colour}</title>
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://whatcolourhoodieiskevinwearingtoday.com/" />
+        <meta property="og:title" content="What colour hoodie is Kevin wearing today?" />
+        <meta property="og:description" content={`It's ${colour}`} />
+        <meta property="og:image" content={`https://via.placeholder.com/600/${hex}/fff/?text=Kevin%27s%20hoodie`} />
+      </Helmet>
+    </>
+  );
+};
+
+export default IndexPage;
