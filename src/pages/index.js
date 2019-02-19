@@ -7,8 +7,9 @@ import Hoodie from '../components/hoodie';
 import '../components/main.css';
 
 const IndexPage = ({ data })  => {
-  const colour = data.site.siteMetadata.colour;
-  const hex = data.site.siteMetadata.hex;
+  const latest = data.current.edges[0].node;
+  const colour = latest.colour;
+  const hex = latest.hex;
 
   return (
     <>
@@ -31,10 +32,12 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    site {
-      siteMetadata {
-        colour,
-        hex
+    current: allColoursJson(limit:1) {
+      edges {
+        node {
+          colour
+          hex
+        }
       }
     }
   }
