@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "whatcolourhoodieiskevinwearingtoday.com",
+  "alias": "whatcolourhoodieiskevinwearingtoday.com",
   "builds": [
     {
       "src": "package.json",
