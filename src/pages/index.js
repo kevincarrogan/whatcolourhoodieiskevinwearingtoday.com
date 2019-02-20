@@ -17,6 +17,11 @@ const IndexPage = ({ data })  => {
         <Link to="/history">History</Link>
       </Hoodie>
       <Helmet>
+        <style type="text/css">{`
+          body {
+              background-color: #${hex};
+          }
+        `}</style>
         <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet" />
         <meta charSet="utf-8" />
         <title>It's {colour}</title>
