@@ -39,6 +39,7 @@ const HistoryPage = ({ data })  => {
         <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet" />
         <meta charSet="utf-8" />
         <title>History</title>
+        <meta name="viewport" content="initial-scale=1.0" />
       </Helmet>
     </>
   );
