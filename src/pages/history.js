@@ -22,7 +22,7 @@ const HistoryPage = ({ data })  => {
           >
             <div style={{fontSize: '4rem', lineHeight: '4rem'}}>{upperFirst(colour.node.colour)}</div>
             <div style={{fontSize: '1.5rem'}}>
-              {(i == 0) && <Link to="/">Today</Link>}
+              {(i === 0) && <Link to="/">Today</Link>}
               {(i > 0) && colour.node.date}
             </div>
           </li>
