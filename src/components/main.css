@@ -12,3 +12,7 @@ body {
   width: 100vw;
   -webkit-font-smoothing: antialiased;
 }
+
+a, a:visited {
+  color: #fff;
+}

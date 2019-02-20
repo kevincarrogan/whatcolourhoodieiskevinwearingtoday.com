@@ -8,5 +8,30 @@
     "colour": "dim grey",
     "hex": "696969",
     "date": "2019-02-18"
+  },
+  {
+    "colour": "jam",
+    "hex": "600f0b",
+    "date": "2019-02-15"
+  },
+  {
+    "colour": "polynesian blue",
+    "hex": "224c98",
+    "date": "2019-02-13"
+  },
+  {
+    "colour": "patchwork plum",
+    "hex": "7e696a",
+    "date": "2019-02-10"
+  },
+  {
+    "colour": "claret",
+    "hex": "722f37",
+    "date": "2019-02-09"
+  },
+  {
+    "colour": "blue turquoise",
+    "hex": "6aadad",
+    "date": "2019-02-07"
   }
 ]

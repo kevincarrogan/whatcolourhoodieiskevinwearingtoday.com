@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import Hoodie from '../components/hoodie';
@@ -13,7 +13,9 @@ const IndexPage = ({ data })  => {
 
   return (
     <>
-      <Hoodie colour={colour} hex={hex} />
+      <Hoodie colour={colour} hex={hex}>
+        <Link to="/history">History</Link>
+      </Hoodie>
       <Helmet>
         <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet" />
         <meta charSet="utf-8" />
