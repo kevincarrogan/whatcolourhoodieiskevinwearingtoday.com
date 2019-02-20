@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import '../components/main.css';
@@ -21,7 +21,10 @@ const HistoryPage = ({ data })  => {
             key={i}
           >
             <div style={{fontSize: '4rem', lineHeight: '4rem'}}>{upperFirst(colour.node.colour)}</div>
-            <div style={{fontSize: '1.5rem'}}>{colour.node.date}</div>
+            <div style={{fontSize: '1.5rem'}}>
+              {(i == 0) && <Link to="/">Today</Link>}
+              {(i > 0) && colour.node.date}
+            </div>
           </li>
         ))}
       </ul>
