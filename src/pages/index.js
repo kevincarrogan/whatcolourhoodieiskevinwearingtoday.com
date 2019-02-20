@@ -25,7 +25,6 @@ const IndexPage = ({ data })  => {
         <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet" />
         <meta charSet="utf-8" />
         <title>It's {colour}</title>
-        <meta name="viewport" content="initial-scale=1.0" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://whatcolourhoodieiskevinwearingtoday.com/" />
         <meta property="og:title" content="What colour hoodie is Kevin wearing today?" />
