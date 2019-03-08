@@ -6,6 +6,8 @@ import Hoodie from '../components/hoodie';
 
 import '../components/main.css';
 
+import metaImage from './meta-image.png';
+
 const IndexPage = ({ data })  => {
   const latest = data.current.edges[0].node;
   const colour = latest.colour;
@@ -29,7 +31,7 @@ const IndexPage = ({ data })  => {
         <meta property="og:url" content="https://whatcolourhoodieiskevinwearingtoday.com/" />
         <meta property="og:title" content="What colour hoodie is Kevin wearing today?" />
         <meta property="og:description" content={`It's ${colour}`} />
-        <meta property="og:image" content={`https://via.placeholder.com/600/${hex}/fff/?text=Kevin%27s%20hoodie`} />
+        <meta property="og:image" content={metaImage} />
       </Helmet>
     </>
   );
