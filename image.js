@@ -4,30 +4,38 @@ const Canvas = require('canvas');
 
 const fontFile = (name) => {
   return path.join(__dirname, 'fonts/Nunito', name)
-}
+};
 
-Canvas.registerFont(fontFile('Nunito-Bold.ttf'), { family: 'nunito' });
+const createImage = (width, height, text, colour, filename) => {
+  const fontName = 'Nunito-Bold';
+  try {
+    Canvas.registerFont(fontFile(`${fontName}.ttf`), { family: 'nunito' });
+  } catch {
+    console.error(`Error loading font ${fontName}`);
+    console.error('Please download from https://fonts.google.com/specimen/Nunito and place in ./fonts/');
+    return;
+  }
 
-const width = 800;
-const height = 600;
+  const canvas = Canvas.createCanvas(width, height);
+  const ctx = canvas.getContext('2d');
 
-const canvas = Canvas.createCanvas(width, height);
-const ctx = canvas.getContext('2d');
+  ctx.fillStyle = `#${colour}`;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-ctx.fillStyle = '#6aadad';
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.font = '72px nunito';
+  ctx.fillStyle = '#fff';
 
-ctx.font = '72px nunito';
-ctx.fillStyle = '#fff';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(`It's ${text}`, width / 2, height / 2);
 
-ctx.textAlign = 'center';
-ctx.textBaseline = 'middle';
-ctx.fillText("It's blue turquoise", width / 2, height / 2);
+  canvas
+    .createPNGStream()
+    .pipe(
+      fs.createWriteStream(
+        path.join(__dirname, `${filename}.png`)
+      )
+    );
+};
 
-canvas
-  .createPNGStream()
-  .pipe(
-    fs.createWriteStream(
-      path.join(__dirname, 'image.png')
-    )
-  );
+createImage(800, 600, 'blue turquoise', '6aadad', 'image');
