@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const Canvas = require('canvas');
 
+const coloursHistory = require('./data/colours.json');
+
 const fontFile = (name) => {
   return path.join(__dirname, 'fonts/Nunito', name)
 };
@@ -38,4 +40,8 @@ const createImage = (width, height, text, colour, filename) => {
     );
 };
 
-createImage(800, 600, 'blue turquoise', '6aadad', 'image');
+const latestColour = coloursHistory[0];
+const colour = latestColour.colour;
+const hex = latestColour.hex;
+
+createImage(800, 600, colour, hex, 'image');
