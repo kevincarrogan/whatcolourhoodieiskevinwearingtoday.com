@@ -10,11 +10,12 @@ const fontFile = (name) => {
 
 const createImage = (width, height, text, colour, filename) => {
   const fontName = 'Nunito-Bold';
+  const fullPath = fontFile(`${fontName}.ttf`);
   try {
-    Canvas.registerFont(fontFile(`${fontName}.ttf`), { family: 'nunito' });
+    Canvas.registerFont(fullPath, { family: 'nunito' });
   } catch {
-    console.error(`Error loading font ${fontName}`);
-    console.error('Please download from https://fonts.google.com/specimen/Nunito and place in ./fonts/');
+    console.error(`Error loading font ${fullPath}.`);
+    console.error('Please download from https://fonts.google.com/specimen/Nunito.');
     return;
   }
 
