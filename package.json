@@ -27,6 +27,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "now-build": "npm run build"
+    "now-build": "npm run build",
+    "format": "prettier --write src/**/*.{js,jsx}"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
   }
 }
