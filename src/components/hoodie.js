@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import styles from "./hoodie.module.css";
+import styles from './hoodie.module.css';
 
 const Hoodie = ({ colour, hex, children }) => (
   <main
