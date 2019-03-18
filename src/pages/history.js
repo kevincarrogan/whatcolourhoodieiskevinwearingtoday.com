@@ -20,7 +20,7 @@ const HistoryPage = ({ data }) => {
             style={{
               backgroundColor: `#${colour.node.hex}`,
               color: "#fff",
-              padding: "1rem 0"
+              padding: "1rem 0",
             }}
             key={i}
           >

@@ -8,7 +8,7 @@ const Hoodie = ({ colour, hex, children }) => (
     className={styles.main}
     style={{
       backgroundColor: `#${hex}`,
-      color: `#fff`
+      color: `#fff`,
     }}
   >
     <h1>It's {colour}</h1>
@@ -19,7 +19,7 @@ const Hoodie = ({ colour, hex, children }) => (
 
 Hoodie.propTypes = {
   colour: PropTypes.string,
-  hex: PropTypes.string
+  hex: PropTypes.string,
 };
 
 export default Hoodie;
