@@ -4,18 +4,20 @@ const Canvas = require('canvas');
 
 const coloursHistory = require('./data/colours.json');
 
-const fontFile = (name) => {
-  return path.join(__dirname, 'fonts/Nunito', name)
+const fontFile = name => {
+  return path.join(__dirname, 'fonts/Nunito', name);
 };
 
-const createImage = (width, height, text, colour, filename) => {
+const createImage = (width, height, text, colour, filePath) => {
   const fontName = 'Nunito-Bold';
   const fullPath = fontFile(`${fontName}.ttf`);
   try {
     Canvas.registerFont(fullPath, { family: 'nunito' });
   } catch {
     console.error(`Error loading font ${fullPath}.`);
-    console.error('Please download from https://fonts.google.com/specimen/Nunito.');
+    console.error(
+      'Please download from https://fonts.google.com/specimen/Nunito.'
+    );
     return;
   }
 
@@ -32,17 +34,17 @@ const createImage = (width, height, text, colour, filename) => {
   ctx.textBaseline = 'middle';
   ctx.fillText(`It's ${text}`, width / 2, height / 2);
 
-  canvas
-    .createPNGStream()
-    .pipe(
-      fs.createWriteStream(
-        path.join(__dirname, `${filename}.png`)
-      )
-    );
+  canvas.createPNGStream().pipe(fs.createWriteStream(filePath));
 };
 
 const latestColour = coloursHistory[0];
 const colour = latestColour.colour;
 const hex = latestColour.hex;
 
-createImage(800, 600, colour, hex, 'image');
+createImage(
+  800,
+  600,
+  colour,
+  hex,
+  path.join(__dirname, `src`, `pages`, `meta-image.png`)
+);
