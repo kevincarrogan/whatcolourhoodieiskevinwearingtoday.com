@@ -1,45 +1,30 @@
 .stat {
-  align-items: center;
+  background-color: #eee;
   border: 10px solid #eee;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.27);
   display: flex;
-  flex: 1;
-  height: 250px;
-  justify-content: center;
-  position: relative;
+  flex-direction: column-reverse;
   margin: 10px;
-  padding: 10px;
-  width: 250px;
 }
 
 .title {
-  background-color: #eee;
-  bottom: 0;
   color: #666;
   font-size: 2rem;
-  left: 0;
   margin: 0;
-  padding-top: 10px;
-  position: absolute;
-  right: 0;
-  z-index: 1;
+  margin-top: 10px;
 }
 
 .colourList {
-  bottom: 0;
   display: flex;
   flex-direction: column;
-  left: 0;
   list-style: none;
+  height: 250px;
   margin: 0;
-  margin-bottom: 53px;
   padding: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+  width: 300px;
 }
 
 .colourItem {
-  flex-grow: 1;
+  flex: 1;
 }
