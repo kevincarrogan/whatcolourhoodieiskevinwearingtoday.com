@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { DateTime } from 'luxon';
 
@@ -78,10 +78,17 @@ const StatsPage = ({ data }) => {
 
   return (
     <>
-      <section className={styles.statsSection}>
-        <Stat title="Most worn" colours={mostWorn(colours)} />
-        <Stat title="Longest worn" colours={longestWorn(coloursWithDate)} />
-        <Stat title="Least worn" colours={leastWorn(colours)} />
+      <section>
+        <h1 className={styles.header}>Stats</h1>
+        <section className={styles.statsSection}>
+          <Stat title="Most worn" colours={mostWorn(colours)} />
+          <Stat title="Longest worn" colours={longestWorn(coloursWithDate)} />
+          <Stat title="Least worn" colours={leastWorn(colours)} />
+        </section>
+        <div className={styles.links}>
+          <Link to="/">Today</Link>
+          <Link to="/history">History</Link>
+        </div>
       </section>
       <Helmet>
         <style type="text/css">{`

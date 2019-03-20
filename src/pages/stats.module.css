@@ -1,3 +1,14 @@
+.header {
+  margin: 2rem;
+}
+
 .statsSection {
   display: flex;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem;
 }

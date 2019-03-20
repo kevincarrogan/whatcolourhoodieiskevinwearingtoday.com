@@ -17,6 +17,7 @@ const IndexPage = ({ data }) => {
     <>
       <Hoodie colour={colour} hex={hex}>
         <Link to="/history">History</Link>
+        <Link to="/stats">Stats</Link>
       </Hoodie>
       <Helmet>
         <style type="text/css">{`

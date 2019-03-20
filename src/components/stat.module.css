@@ -1,8 +1,10 @@
 .stat {
-  border: 3px solid #eee;
+  align-items: center;
+  border: 10px solid #eee;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.27);
   display: flex;
+  flex: 1;
   justify-content: center;
   position: relative;
   margin: 10px;
