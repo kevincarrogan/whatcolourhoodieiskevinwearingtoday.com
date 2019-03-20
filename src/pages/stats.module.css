@@ -1,5 +1,5 @@
 .header {
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .statsSection {
@@ -11,4 +11,10 @@
   flex-direction: column;
   justify-content: center;
   margin: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .statsSection {
+    flex-direction: column;
+  }
 }
