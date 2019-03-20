@@ -1,11 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import { DateTime } from 'luxon';
 
 import counter from '../utils/counter';
 import Stat from '../components/stat';
 
 import '../components/main.css';
+
+import styles from './stats.module.css';
 
 const wornByCountFunc = (colours, func) => {
   const coloursCount = counter(colours);
@@ -65,18 +68,36 @@ const longestWorn = colours => {
 };
 
 const StatsPage = ({ data }) => {
-  const colours = data.colours.edges.map(item => item.node.colour);
+  const latest = data.current.edges[0].node;
+  const hex = latest.hex;
+  const colours = data.colours.edges.map(item => item.node.hex);
   const coloursWithDate = data.colours.edges.map(item => [
-    item.node.colour,
+    item.node.hex,
     item.node.date,
   ]);
 
   return (
-    <section>
-      <Stat title="Most worn" colours={mostWorn(colours)} />
-      <Stat title="Longest worn" colours={longestWorn(coloursWithDate)} />
-      <Stat title="Least worn" colours={leastWorn(colours)} />
-    </section>
+    <>
+      <section className={styles.statsSection}>
+        <Stat title="Most worn" colours={mostWorn(colours)} />
+        <Stat title="Longest worn" colours={longestWorn(coloursWithDate)} />
+        <Stat title="Least worn" colours={leastWorn(colours)} />
+      </section>
+      <Helmet>
+        <style type="text/css">{`
+          body {
+              background-color: #${hex};
+              color: #fff;
+          }
+        `}</style>
+        <link
+          href="https://fonts.googleapis.com/css?family=Nunito:700"
+          rel="stylesheet"
+        />
+        <meta charSet="utf-8" />
+        <title>Stats</title>
+      </Helmet>
+    </>
   );
 };
 
@@ -84,6 +105,14 @@ export default StatsPage;
 
 export const query = graphql`
   query {
+    current: allColoursJson(limit: 1) {
+      edges {
+        node {
+          colour
+          hex
+        }
+      }
+    }
     colours: allColoursJson {
       edges {
         node {
