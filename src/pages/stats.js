@@ -5,6 +5,26 @@ import Stat from '../components/stat';
 
 import '../components/main.css';
 
+const mostWorn = colours => {
+  const coloursCount = {};
+  const maxCount = 0;
+
+  colours.forEach(colour => {
+    const count = coloursCount['colour'];
+    if (count) {
+      coloursCount[colour]++;
+      if (coloursCount[colour] > maxCount) {
+        maxCount = coloursCount[colour];
+      }
+    } else {
+      coloursCount[colour] = 1;
+      if (1 > maxCount) {
+        maxCount = 1;
+      }
+    }
+  });
+};
+
 const StatsPage = ({ data }) => {
   return (
     <section>
