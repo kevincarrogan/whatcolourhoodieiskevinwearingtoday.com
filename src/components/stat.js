@@ -5,7 +5,7 @@ const Stat = ({ title, colours }) => (
     <h1>{title}</h1>
     <ul>
       {colours.map(colour => (
-        <li>{colour}</li>
+        <li key={colour}>{colour}</li>
       ))}
     </ul>
   </article>

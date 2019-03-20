@@ -6,11 +6,11 @@ import Stat from '../components/stat';
 import '../components/main.css';
 
 const mostWorn = colours => {
-  const coloursCount = {};
-  const maxCount = 0;
+  let coloursCount = {};
+  let maxCount = 0;
 
   colours.forEach(colour => {
-    const count = coloursCount['colour'];
+    const count = coloursCount[colour];
     if (count) {
       coloursCount[colour]++;
       if (coloursCount[colour] > maxCount) {
@@ -23,12 +23,19 @@ const mostWorn = colours => {
       }
     }
   });
+
+  const hasMax = ([k, v]) => v === maxCount;
+  let filteredColoursCount = Object.entries(coloursCount).filter(hasMax);
+
+  return filteredColoursCount.map(d => d[0]);
 };
 
 const StatsPage = ({ data }) => {
+  const colours = data.colours.edges.map(item => item.node.colour);
+
   return (
     <section>
-      <Stat title="Most worn" colours={['Red', 'Blue']} />
+      <Stat title="Most worn" colours={mostWorn(colours)} />
       <Stat title="Longest worn" colours={['Red', 'Blue', 'Green']} />
       <Stat title="Least worn" colours={['Green']} />
     </section>
