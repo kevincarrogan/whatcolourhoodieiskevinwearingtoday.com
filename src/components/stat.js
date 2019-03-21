@@ -12,7 +12,7 @@ const Stat = ({ title, colours }) => {
     <article className={styles.stat} onMouseOut={onMouseOut}>
       <h1 className={styles.title}>{title}</h1>
       <ul className={styles.colourList}>
-        {colours.map(hex => {
+        {colours.map(([colour, hex]) => {
           const className = classNames(styles.colourItem, {
             [styles.colourItemSelected]: hex === selected,
             [styles.colourItemUnselected]:
@@ -28,7 +28,7 @@ const Stat = ({ title, colours }) => {
               style={{ backgroundColor: `#${hex}` }}
               onMouseOver={onMouseOver}
             >
-              <span class={styles.colourItemContents}>{hex}</span>
+              <span className={styles.colourItemContents}>{colour}</span>
             </li>
           );
         })}

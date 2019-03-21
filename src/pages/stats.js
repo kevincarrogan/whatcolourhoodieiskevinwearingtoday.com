@@ -11,11 +11,19 @@ import '../components/main.css';
 import styles from './stats.module.css';
 
 const wornByCountFunc = (colours, func) => {
-  const coloursCount = counter(colours);
+  let colourMap = {};
+  colours.forEach(([name, hex]) => {
+    colourMap[name] = hex;
+  });
+  const names = colours.map(colour => colour[0]);
+  const coloursCount = counter(names);
   const funcOutput = func(...Object.values(coloursCount));
   const hasCount = ([k, v]) => v === funcOutput;
   const filteredColoursCount = Object.entries(coloursCount).filter(hasCount);
-  const filteredColours = filteredColoursCount.map(d => d[0]);
+  const filteredColours = filteredColoursCount.map(d => [
+    d[0],
+    colourMap[d[0]],
+  ]);
 
   return filteredColours;
 };
@@ -56,13 +64,21 @@ const wornDurations = coloursWithDate => {
 };
 
 const longestWorn = colours => {
-  const coloursByDuration = wornDurations(colours);
+  let colourMap = {};
+  colours.forEach(([name, hex, _]) => {
+    colourMap[name] = hex;
+  });
+  const namesByDuration = colours.map(([name, hex, date]) => [name, date]);
+  const coloursByDuration = wornDurations(namesByDuration);
   const maxDuration = Math.max(...Object.values(coloursByDuration));
   const hasMaxDuration = ([k, v]) => v === maxDuration;
   const filteredColoursByDuration = Object.entries(coloursByDuration).filter(
     hasMaxDuration
   );
-  const filteredColours = filteredColoursByDuration.map(d => d[0]);
+  const filteredColours = filteredColoursByDuration.map(d => [
+    d[0],
+    colourMap[d[0]],
+  ]);
 
   return filteredColours;
 };
@@ -70,8 +86,12 @@ const longestWorn = colours => {
 const StatsPage = ({ data }) => {
   const latest = data.current.edges[0].node;
   const hex = latest.hex;
-  const colours = data.colours.edges.map(item => item.node.hex);
+  const colours = data.colours.edges.map(item => [
+    item.node.colour,
+    item.node.hex,
+  ]);
   const coloursWithDate = data.colours.edges.map(item => [
+    item.node.colour,
     item.node.hex,
     item.node.date,
   ]);
