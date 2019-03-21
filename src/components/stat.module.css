@@ -33,8 +33,13 @@
 
 .colourItem {
   flex: 1;
+  transition: flex-grow 0.2s;
 }
 
 .colourItemSelected {
-  outline: 5px solid red;
+  flex-grow: 100;
+}
+
+.colourItemUnselected {
+  flex-grow: 0;
 }

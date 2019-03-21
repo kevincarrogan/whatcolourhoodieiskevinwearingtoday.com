@@ -15,6 +15,8 @@ const Stat = ({ title, colours }) => {
         {colours.map(hex => {
           const className = classNames(styles.colourItem, {
             [styles.colourItemSelected]: hex === selected,
+            [styles.colourItemUnselected]:
+              selected !== undefined && hex !== selected,
           });
           const onMouseOver = evt => {
             setSelected(hex);
