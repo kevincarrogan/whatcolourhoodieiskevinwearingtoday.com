@@ -34,3 +34,7 @@
 .colourItem {
   flex: 1;
 }
+
+.colourItemSelected {
+  outline: 5px solid red;
+}
