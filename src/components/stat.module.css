@@ -1,6 +1,7 @@
 :root {
   --stats-background: #eee;
   --margin-width: 10px;
+  --transition-duration: 0.2s;
 }
 
 .stat {
@@ -32,8 +33,12 @@
 }
 
 .colourItem {
+  align-items: center;
+  display: flex;
   flex: 1;
-  transition: flex-grow 0.2s;
+  font-size: 2rem;
+  justify-content: center;
+  transition: flex-grow var(--transition-duration);
 }
 
 .colourItemSelected {
@@ -42,4 +47,13 @@
 
 .colourItemUnselected {
   flex-grow: 0;
+}
+
+.colourItemContents {
+  opacity: 0;
+  transition: opacity var(--transition-duration);
+}
+
+.colourItemSelected .colourItemContents {
+  opacity: 1;
 }

@@ -27,7 +27,9 @@ const Stat = ({ title, colours }) => {
               key={hex}
               style={{ backgroundColor: `#${hex}` }}
               onMouseOver={onMouseOver}
-            />
+            >
+              <span class={styles.colourItemContents}>{hex}</span>
+            </li>
           );
         })}
       </ul>
