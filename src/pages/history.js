@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import '../components/main.css';
 import '../components/history.css';
 
-const upperFirst = string => string.charAt(0).toUpperCase() + string.slice(1);
+import upperFirst from '../utils/upper-first';
 
 const HistoryPage = ({ data }) => {
   const latest = data.current.edges[0].node;

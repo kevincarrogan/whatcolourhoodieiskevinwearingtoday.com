@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
+import upperFirst from '../utils/upper-first';
+
 import styles from './stat.module.css';
 
 const Stat = ({ title, colours }) => {
   const [selected, setSelected] = useState(undefined);
-  const [onlyClick, setOnlyClick] = useState(false);
   const onMouseOut = evt => {
     setSelected(undefined);
-    setOnlyClick(false);
   };
   return (
     <article className={styles.stat} onMouseOut={onMouseOut}>
@@ -21,20 +21,7 @@ const Stat = ({ title, colours }) => {
               selected !== undefined && hex !== selected,
           });
           const onMouseOver = evt => {
-            if (!onlyClick) {
-              setSelected(hex);
-            }
-          };
-          const onMouseOut = evt => {
-            evt.stopPropagation();
-          };
-          const onClick = evt => {
-            setOnlyClick(true);
-            if (selected === hex) {
-              setSelected(undefined);
-            } else {
-              setSelected(hex);
-            }
+            setSelected(hex);
           };
           return (
             <li
@@ -42,10 +29,10 @@ const Stat = ({ title, colours }) => {
               key={hex}
               style={{ backgroundColor: `#${hex}` }}
               onMouseOver={onMouseOver}
-              onMouseOut={onMouseOut}
-              onClick={onClick}
             >
-              <span className={styles.colourItemContents}>{colour}</span>
+              <span className={styles.colourItemContents}>
+                {upperFirst(colour)}
+              </span>
             </li>
           );
         })}
