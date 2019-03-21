@@ -21,12 +21,20 @@ const Stat = ({ title, colours }) => {
           const onMouseOver = evt => {
             setSelected(hex);
           };
+          const onClick = evt => {
+            if (selected === hex) {
+              setSelected(undefined);
+            } else {
+              setSelected(hex);
+            }
+          };
           return (
             <li
               className={className}
               key={hex}
               style={{ backgroundColor: `#${hex}` }}
               onMouseOver={onMouseOver}
+              onClick={onClick}
             >
               <span className={styles.colourItemContents}>{colour}</span>
             </li>

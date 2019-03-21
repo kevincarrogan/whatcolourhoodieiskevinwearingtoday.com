@@ -51,6 +51,7 @@
 
 .colourItemContents {
   opacity: 0;
+  pointer-events: none;
   transition: opacity var(--transition-duration);
 }
 
