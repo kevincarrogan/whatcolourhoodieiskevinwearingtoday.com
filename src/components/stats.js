@@ -1,5 +1,7 @@
 import React from 'react';
 import { DateTime } from 'luxon';
+import hexRgb from 'hex-rgb';
+import space from 'color-space';
 
 import counter from '../utils/counter';
 
@@ -79,6 +81,43 @@ const longestWorn = colours => {
   return filteredColours;
 };
 
+const hexToBrightness = hex =>
+  space.rgb.hsp(hexRgb(hex, { format: 'array' }))[2];
+
+const brightest = colours => {
+  const coloursWithBrightness = colours.map(([name, hex]) => [
+    name,
+    hex,
+    hexToBrightness(hex),
+  ]);
+  const brightnessValues = coloursWithBrightness.map(
+    ([name, hex, brightness]) => brightness
+  );
+  const maxBrightness = Math.max(...brightnessValues);
+  const filteredColours = coloursWithBrightness
+    .filter(([name, hex, brightness]) => brightness === maxBrightness)
+    .map(([name, hex, brightness]) => [name, hex]);
+
+  return filteredColours;
+};
+
+const darkest = colours => {
+  const coloursWithBrightness = colours.map(([name, hex]) => [
+    name,
+    hex,
+    hexToBrightness(hex),
+  ]);
+  const brightnessValues = coloursWithBrightness.map(
+    ([name, hex, brightness]) => brightness
+  );
+  const minBrightness = Math.min(...brightnessValues);
+  const filteredColours = coloursWithBrightness
+    .filter(([name, hex, brightness]) => brightness === minBrightness)
+    .map(([name, hex, brightness]) => [name, hex]);
+
+  return filteredColours;
+};
+
 const Stats = ({ title, colours, coloursWithDate }) => (
   <section>
     <h1 className={styles.statsHeader}>{title}</h1>
@@ -86,6 +125,8 @@ const Stats = ({ title, colours, coloursWithDate }) => (
       <Stat title="Most worn" colours={mostWorn(colours)} />
       <Stat title="Longest worn" colours={longestWorn(coloursWithDate)} />
       <Stat title="Least worn" colours={leastWorn(colours)} />
+      <Stat title="Brightest" colours={brightest(colours)} />
+      <Stat title="Darkest" colours={darkest(colours)} />
     </div>
   </section>
 );
