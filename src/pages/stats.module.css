@@ -2,23 +2,9 @@
   margin: 1rem;
 }
 
-.statsSection {
-  display: flex;
-}
-
-.statsHeader {
-  margin: 0.5rem;
-}
-
 .links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 2rem;
-}
-
-@media (max-width: 1024px) {
-  .statsSection {
-    flex-direction: column;
-  }
 }
