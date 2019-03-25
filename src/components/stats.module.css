@@ -1,13 +1,13 @@
 .statsSection {
-  display: flex;
+  margin-bottom: 2rem;
 }
 
 .statsHeader {
   margin: 0.5rem;
 }
 
-@media (max-width: 1024px) {
-  .statsSection {
-    flex-direction: column;
-  }
+.statsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
