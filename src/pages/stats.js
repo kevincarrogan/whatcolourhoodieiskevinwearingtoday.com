@@ -86,6 +86,7 @@ const longestWorn = colours => {
 const StatsPage = ({ data }) => {
   const latest = data.current.edges[0].node;
   const hex = latest.hex;
+
   const colours = data.colours.edges.map(item => [
     item.node.colour,
     item.node.hex,
@@ -96,15 +97,62 @@ const StatsPage = ({ data }) => {
     item.node.date,
   ]);
 
+  let coloursByMonth = {};
+  data.colours.edges.forEach(item => {
+    const { colour, hex, date } = item.node;
+    const format = 'd LLL yyyy';
+    const luxonDate = DateTime.fromFormat(date, format);
+
+    let yearMap = coloursByMonth[luxonDate.year];
+    if (!yearMap) {
+      yearMap = {};
+      coloursByMonth[luxonDate.year] = yearMap;
+    }
+
+    let monthMap = yearMap[luxonDate.monthLong];
+    if (!monthMap) {
+      monthMap = {
+        colours: [],
+        coloursWithDate: [],
+      };
+      yearMap[luxonDate.monthLong] = monthMap;
+    }
+
+    monthMap.colours.push([colour, hex]);
+    monthMap.coloursWithDate.push([colour, hex, date]);
+  });
+
   return (
     <>
       <section>
         <h1 className={styles.header}>Stats</h1>
-        <section className={styles.statsSection}>
-          <Stat title="Most worn" colours={mostWorn(colours)} />
-          <Stat title="Longest worn" colours={longestWorn(coloursWithDate)} />
-          <Stat title="Least worn" colours={leastWorn(colours)} />
+        <section>
+          <h1 className={styles.statsHeader}>All Time</h1>
+          <div className={styles.statsSection}>
+            <Stat title="Most worn" colours={mostWorn(colours)} />
+            <Stat title="Longest worn" colours={longestWorn(coloursWithDate)} />
+            <Stat title="Least worn" colours={leastWorn(colours)} />
+          </div>
         </section>
+        {Object.entries(coloursByMonth).map(([year, monthData]) => (
+          <React.Fragment key={year}>
+            {Object.entries(monthData).map(([month, data]) => (
+              <section key={month}>
+                <h1 className={styles.statsHeader}>
+                  {month} {year}
+                </h1>
+                <div className={styles.statsSection}>
+                  <Stat title="Most worn" colours={mostWorn(data.colours)} />
+                  <Stat
+                    title="Longest worn"
+                    colours={longestWorn(data.coloursWithDate)}
+                  />
+                  <Stat title="Least worn" colours={leastWorn(data.colours)} />
+                </div>
+              </section>
+            ))}
+          </React.Fragment>
+        ))}
         <div className={styles.links}>
           <Link to="/">Today</Link>
           <Link to="/history">History</Link>
