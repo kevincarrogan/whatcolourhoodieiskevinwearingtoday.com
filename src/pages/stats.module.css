@@ -6,6 +6,10 @@
   display: flex;
 }
 
+.statsHeader {
+  margin: 0.5rem;
+}
+
 .links {
   display: flex;
   flex-direction: column;
