@@ -38,6 +38,7 @@
   flex: 1;
   font-size: 2rem;
   justify-content: center;
+  overflow: hidden;
   transition: all var(--transition-duration);
 }
 
