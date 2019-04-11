@@ -81,6 +81,16 @@ const longestWorn = colours => {
   return filteredColours;
 };
 
+const uniqueColours = colours => {
+  let coloursMap = {};
+
+  colours.forEach(([name, hex]) => {
+    coloursMap[name] = hex;
+  });
+
+  return Object.entries(coloursMap);
+};
+
 const hexToBrightness = hex =>
   space.rgb.hsp(hexRgb(hex, { format: 'array' }))[2];
 
@@ -98,7 +108,7 @@ const brightest = colours => {
     .filter(([name, hex, brightness]) => brightness === maxBrightness)
     .map(([name, hex, brightness]) => [name, hex]);
 
-  return filteredColours;
+  return uniqueColours(filteredColours);
 };
 
 const darkest = colours => {
@@ -115,21 +125,10 @@ const darkest = colours => {
     .filter(([name, hex, brightness]) => brightness === minBrightness)
     .map(([name, hex, brightness]) => [name, hex]);
 
-  return filteredColours;
+  return uniqueColours(filteredColours);
 };
 
-const allColours = colours => {
-  const coloursSet = new Set(colours.map(([name, hex]) => hex));
-  const coloursMap = {};
-  colours.forEach(([name, hex]) => {
-    coloursMap[String(hex)] = name;
-  });
-  let all = [];
-  for (let hex of coloursSet.values()) {
-    all.push([coloursMap[hex], hex]);
-  }
-  return all;
-};
+const allColours = uniqueColours;
 
 const Stats = ({ title, colours, coloursWithDate }) => (
   <section className={styles.statsSection}>
