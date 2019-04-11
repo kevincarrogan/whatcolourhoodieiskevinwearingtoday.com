@@ -130,6 +130,10 @@ const darkest = colours => {
 
 const allColours = uniqueColours;
 
+const first = colours => [colours[colours.length - 1]];
+
+const last = colours => [colours[0]];
+
 const Stats = ({ title, colours, coloursWithDate }) => (
   <section className={styles.statsSection}>
     <h1 className={styles.statsHeader}>{title}</h1>
@@ -140,6 +144,8 @@ const Stats = ({ title, colours, coloursWithDate }) => (
       <Stat title="Least worn" colours={leastWorn(colours)} />
       <Stat title="Brightest" colours={brightest(colours)} />
       <Stat title="Darkest" colours={darkest(colours)} />
+      <Stat title="First" colours={first(colours)} />
+      <Stat title="Last" colours={last(colours)} />
     </div>
   </section>
 );
