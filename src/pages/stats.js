@@ -52,11 +52,6 @@ const StatsPage = ({ data }) => {
     <>
       <section>
         <h1 className={styles.header}>Stats</h1>
-        <Stats
-          title="All Time"
-          colours={colours}
-          coloursWithDate={coloursWithDate}
-        />
         {Object.entries(coloursByMonth).map(([year, monthData]) => (
           <React.Fragment key={year}>
             {Object.entries(monthData).map(([month, data]) => (
@@ -69,6 +64,11 @@ const StatsPage = ({ data }) => {
             ))}
           </React.Fragment>
         ))}
+        <Stats
+          title="All Time"
+          colours={colours}
+          coloursWithDate={coloursWithDate}
+        />
         <div className={styles.links}>
           <Link to="/">Today</Link>
           <Link to="/history">History</Link>
