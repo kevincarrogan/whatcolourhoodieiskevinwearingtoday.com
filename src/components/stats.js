@@ -118,10 +118,24 @@ const darkest = colours => {
   return filteredColours;
 };
 
+const allColours = colours => {
+  const coloursSet = new Set(colours.map(([name, hex]) => hex));
+  const coloursMap = {};
+  colours.forEach(([name, hex]) => {
+    coloursMap[String(hex)] = name;
+  });
+  let all = [];
+  for (let hex of coloursSet.values()) {
+    all.push([coloursMap[hex], hex]);
+  }
+  return all;
+};
+
 const Stats = ({ title, colours, coloursWithDate }) => (
   <section className={styles.statsSection}>
     <h1 className={styles.statsHeader}>{title}</h1>
     <div className={styles.statsList}>
+      <Stat title="All" colours={allColours(colours)} />
       <Stat title="Most worn" colours={mostWorn(colours)} />
       <Stat title="Longest worn" colours={longestWorn(coloursWithDate)} />
       <Stat title="Least worn" colours={leastWorn(colours)} />
