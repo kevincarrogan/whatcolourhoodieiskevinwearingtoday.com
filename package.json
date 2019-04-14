@@ -8,13 +8,13 @@
     "canvas": "^2.3.1",
     "classnames": "^2.2.6",
     "color-space": "^1.16.0",
-    "gatsby": "^2.1.4",
+    "gatsby": "^2.3.22",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-manifest": "^2.0.17",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-sharp": "^2.0.20",
-    "gatsby-source-filesystem": "^2.0.20",
+    "gatsby-plugin-sharp": "^2.0.34",
+    "gatsby-source-filesystem": "^2.0.29",
     "gatsby-transformer-json": "^2.1.8",
     "gatsby-transformer-sharp": "^2.1.13",
     "hex-rgb": "^4.0.0",
@@ -30,14 +30,19 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "test": "jest",
     "now-build": "npm run build",
     "format": "prettier --write src/**/*.{js,jsx,css}"
   },
   "devDependencies": {
+    "babel-jest": "^24.7.1",
+    "babel-preset-gatsby": "^0.1.11",
     "husky": "^1.3.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.7.1",
     "prettier": "^1.16.4",
-    "pretty-quick": "^1.10.0"
+    "pretty-quick": "^1.10.0",
+    "react-test-renderer": "^16.8.6"
   },
   "husky": {
     "hooks": {
