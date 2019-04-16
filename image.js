@@ -13,7 +13,7 @@ const createImage = (width, height, text, colour, filePath) => {
   const fullPath = fontFile(`${fontName}.ttf`);
   try {
     Canvas.registerFont(fullPath, { family: 'nunito' });
-  } catch {
+  } catch (error) {
     console.error(`Error loading font ${fullPath}.`);
     return;
   }
