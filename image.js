@@ -5,7 +5,7 @@ const Canvas = require('canvas');
 const coloursHistory = require('./data/colours.json');
 
 const fontFile = name => {
-  return path.join(__dirname, 'fonts/Nunito', name);
+  return path.join(__dirname, 'fonts', 'nunito', 'fonts', 'ttf', name);
 };
 
 const createImage = (width, height, text, colour, filePath) => {
@@ -15,9 +15,6 @@ const createImage = (width, height, text, colour, filePath) => {
     Canvas.registerFont(fullPath, { family: 'nunito' });
   } catch {
     console.error(`Error loading font ${fullPath}.`);
-    console.error(
-      'Please download from https://fonts.google.com/specimen/Nunito.'
-    );
     return;
   }
 

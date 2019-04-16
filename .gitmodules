@@ -1,0 +1,3 @@
+[submodule "fonts/nunito"]
+	path = fonts/nunito
+	url = https://github.com/googlefonts/nunito.git

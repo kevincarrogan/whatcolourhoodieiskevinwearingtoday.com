@@ -67,7 +67,3 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
-
-fonts/
-image.png
-src/pages/meta-image.png
