@@ -1,5 +1,5 @@
 import React from 'react';
 
-const NotFoundPage = () => <>Whoops…</>;
+const NotFoundPage = () => <React.Fragment>Whoops…</React.Fragment>;
 
 export default NotFoundPage;

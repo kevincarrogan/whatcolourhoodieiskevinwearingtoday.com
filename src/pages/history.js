@@ -13,7 +13,7 @@ const HistoryPage = ({ data }) => {
   const colours = data.colours.edges;
 
   return (
-    <>
+    <React.Fragment>
       <ul style={{ listStyle: 'none', margin: 0, padding: 0, width: '100vw' }}>
         {colours.map((colour, i) => (
           <li
@@ -47,7 +47,7 @@ const HistoryPage = ({ data }) => {
         <meta charSet="utf-8" />
         <title>History</title>
       </Helmet>
-    </>
+    </React.Fragment>
   );
 };
 

@@ -49,7 +49,7 @@ const StatsPage = ({ data }) => {
   });
 
   return (
-    <>
+    <React.Fragment>
       <section>
         <h1 className={styles.header}>Stats</h1>
         {Object.entries(coloursByMonth).map(([year, monthData]) => (
@@ -88,7 +88,7 @@ const StatsPage = ({ data }) => {
         <meta charSet="utf-8" />
         <title>Stats</title>
       </Helmet>
-    </>
+    </React.Fragment>
   );
 };
 

@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
   const hex = latest.hex;
 
   return (
-    <>
+    <React.Fragment>
       <Hoodie colour={colour} hex={hex}>
         <Link to="/history">History</Link>
         <Link to="/stats">Stats</Link>
@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
         <meta property="og:description" content={`It's ${colour}`} />
         <meta property="og:image" content={metaImage} />
       </Helmet>
-    </>
+    </React.Fragment>
   );
 };
 
