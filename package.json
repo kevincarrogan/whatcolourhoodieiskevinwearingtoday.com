@@ -26,7 +26,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "node image.js && gatsby build",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
