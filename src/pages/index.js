@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet';
 
 import Hoodie from '../components/hoodie';
 
+import isLightColour from '../utils/is-light-colour';
+
 import '../components/main.css';
 
 import metaImage from './meta-image.png';
@@ -42,6 +44,7 @@ const IndexPage = ({ data }) => {
         />
         <meta property="og:description" content={`It's ${colour}`} />
         <meta property="og:image" content={metaImage} />
+        <body className={isLightColour(hex) ? 'light-colour' : 'dark-colour'} />
       </Helmet>
     </React.Fragment>
   );

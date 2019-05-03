@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { DateTime } from 'luxon';
 
 import Stats from '../components/stats';
+import isLightColour from '../utils/is-light-colour';
 
 import '../components/main.css';
 
@@ -78,7 +79,6 @@ const StatsPage = ({ data }) => {
         <style type="text/css">{`
           body {
               background-color: #${hex};
-              color: #fff;
           }
         `}</style>
         <link
@@ -87,6 +87,7 @@ const StatsPage = ({ data }) => {
         />
         <meta charSet="utf-8" />
         <title>Stats</title>
+        <body className={isLightColour(hex) ? 'light-colour' : 'dark-colour'} />
       </Helmet>
     </React.Fragment>
   );

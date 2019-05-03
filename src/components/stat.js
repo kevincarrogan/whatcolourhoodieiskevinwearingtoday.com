@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
+import isLightColour from '../utils/is-light-colour';
 import upperFirst from '../utils/upper-first';
 
 import styles from './stat.module.css';
@@ -27,7 +28,10 @@ const Stat = ({ title, colours }) => {
             <li
               className={className}
               key={hex}
-              style={{ backgroundColor: `#${hex}` }}
+              style={{
+                backgroundColor: `#${hex}`,
+                color: isLightColour(hex) ? '#666' : '#fff',
+              }}
               onMouseOver={onMouseOver}
             >
               <span className={styles.colourItemContents}>

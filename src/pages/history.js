@@ -2,6 +2,8 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
+import isLightColour from '../utils/is-light-colour';
+
 import '../components/main.css';
 import '../components/history.css';
 
@@ -19,7 +21,7 @@ const HistoryPage = ({ data }) => {
           <li
             style={{
               backgroundColor: `#${colour.node.hex}`,
-              color: '#fff',
+              color: isLightColour(colour.node.hex) ? '#666' : '#fff',
               padding: '1rem 0',
             }}
             key={i}
@@ -46,6 +48,7 @@ const HistoryPage = ({ data }) => {
         />
         <meta charSet="utf-8" />
         <title>History</title>
+        <body className={isLightColour(hex) ? 'light-colour' : 'dark-colour'} />
       </Helmet>
     </React.Fragment>
   );

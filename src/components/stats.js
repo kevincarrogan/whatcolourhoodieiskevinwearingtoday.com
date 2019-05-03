@@ -1,9 +1,8 @@
 import React from 'react';
 import { DateTime } from 'luxon';
-import hexRgb from 'hex-rgb';
-import space from 'color-space';
 
 import counter from '../utils/counter';
+import hexToBrightness from '../utils/hex-to-brightness';
 
 import Stat from './stat.js';
 import styles from './stats.module.css';
@@ -90,9 +89,6 @@ const uniqueColours = colours => {
 
   return Object.entries(coloursMap);
 };
-
-const hexToBrightness = hex =>
-  space.rgb.hsp(hexRgb(hex, { format: 'array' }))[2];
 
 const brightest = colours => {
   const coloursWithBrightness = colours.map(([name, hex]) => [

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import isLightColour from '../utils/is-light-colour';
+
 import styles from './hoodie.module.css';
 
 const Hoodie = ({ colour, hex, children }) => (
@@ -8,7 +10,7 @@ const Hoodie = ({ colour, hex, children }) => (
     className={styles.main}
     style={{
       backgroundColor: `#${hex}`,
-      color: `#fff`,
+      color: isLightColour(hex) ? `#666` : `#fff`,
     }}
   >
     <h1>It's {colour}</h1>

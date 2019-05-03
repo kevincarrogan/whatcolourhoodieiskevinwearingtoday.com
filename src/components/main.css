@@ -17,3 +17,9 @@ a,
 a:visited {
   color: #fff;
 }
+
+.light-colour,
+.light-colour a,
+.light-colour a:visited {
+  color: #666;
+}
