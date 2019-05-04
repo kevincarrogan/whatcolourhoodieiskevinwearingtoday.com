@@ -1,28 +1,31 @@
-import React from "react";
+import React from 'react';
 
-let inlinedStyles = ""
-if (process.env.NODE_ENV === "production") {
+import favicon from './favicon.png';
+
+let inlinedStyles = '';
+if (process.env.NODE_ENV === 'production') {
   try {
-    inlinedStyles = require("!raw-loader!../public/styles.css")
+    inlinedStyles = require('!raw-loader!../public/styles.css');
   } catch (e) {
-    console.log(e)
+    console.log(e);
   }
 }
 
 function HTML(props) {
-  let css
-  if (process.env.NODE_ENV === "production") {
+  let css;
+  if (process.env.NODE_ENV === 'production') {
     css = (
       <style
         id="gatsby-inlined-css"
         dangerouslySetInnerHTML={{ __html: inlinedStyles }}
       />
-    )
+    );
   }
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
+        <link rel="icon" type="image/png" href={favicon} />
         {props.headComponents}
         {css}
       </head>
@@ -31,7 +34,7 @@ function HTML(props) {
         {props.postBodyComponents}
       </body>
     </html>
-  )
+  );
 }
 
 export default HTML;
