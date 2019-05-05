@@ -23,3 +23,9 @@ a:visited {
 .light-colour a:visited {
   color: #666;
 }
+
+.dark-colour,
+.dark-colour a,
+.dark-colour a:visited {
+  color: #fff;
+}
