@@ -25,7 +25,6 @@ function HTML(props) {
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <link rel="icon" type="image/png" href={favicon} />
         {props.headComponents}
         {css}
       </head>

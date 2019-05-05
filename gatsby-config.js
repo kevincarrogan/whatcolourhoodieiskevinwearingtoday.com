@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-remove-serviceworker`,
-    `meta-image`
+    `gatsby-plugin-favicon`,
+    `meta-image`,
   ],
-}
+};

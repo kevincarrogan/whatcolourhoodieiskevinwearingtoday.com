@@ -10,6 +10,7 @@
     "color-space": "^1.16.0",
     "gatsby": "^2.3.22",
     "gatsby-image": "^2.0.29",
+    "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-manifest": "^2.0.17",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",

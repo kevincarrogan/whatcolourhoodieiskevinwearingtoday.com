@@ -18,4 +18,10 @@ const latestColour = coloursHistory[0];
 const colour = latestColour.colour;
 const hex = latestColour.hex;
 
-createImage(64, 64, colour, hex, path.join(__dirname, `src`, `favicon.png`));
+createImage(
+  1500,
+  1500,
+  colour,
+  hex,
+  path.join(__dirname, `src`, `favicon.png`)
+);
