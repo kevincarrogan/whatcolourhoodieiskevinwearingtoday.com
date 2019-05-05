@@ -1,10 +1,10 @@
 import React from 'react';
-import { render } from 'ink';
+import { render, AppContext } from 'ink';
 import SelectInput from 'ink-select-input';
 
 import colours from '../data/colours.json';
 
-const Update = () => {
+const Update = ({ exit }) => {
   let seenColours = [];
   let items = [];
 
@@ -21,7 +21,11 @@ const Update = () => {
     }
   });
 
-  return <SelectInput items={items} />;
+  return <SelectInput items={items} onSelect={exit} />;
 };
 
-render(<Update />);
+render(
+  <AppContext.Consumer>
+    {({ exit }) => <Update exit={exit} />}
+  </AppContext.Consumer>
+);
