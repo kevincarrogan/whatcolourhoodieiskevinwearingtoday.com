@@ -35,7 +35,7 @@
     "format": "prettier --write src/**/*.{js,jsx,css}",
     "favicon": "node favicon.js",
     "meta-image": "node meta-image",
-    "update": "npm run favicon && npm run meta-image && git add . && git commit -m 'Update colour'"
+    "update": "npm run favicon && npm run meta-image && git add . && git commit -m 'Update colour' && git push"
   },
   "devDependencies": {
     "babel-jest": "^24.7.1",
