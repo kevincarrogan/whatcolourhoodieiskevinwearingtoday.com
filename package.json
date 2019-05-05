@@ -40,6 +40,7 @@
     "meta-image": "node meta-image",
     "update": "npm run favicon && npm run meta-image && git add . && git commit -m 'Update colour' && git push",
     "build-cli": "babel update-today.js --out-dir built",
+    "develop-cli": "babel update-today.js --watch --out-dir built",
     "cli": "node built/update-today.js"
   },
   "devDependencies": {

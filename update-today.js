@@ -2,27 +2,26 @@ import React from 'react';
 import { render } from 'ink';
 import SelectInput from 'ink-select-input';
 
-const Demo = () => {
-  const handleSelect = item => {
-    // `item` = { label: 'First', value: 'first' }
-  };
+import colours from '../data/colours.json';
 
-  const items = [
-    {
-      label: 'First',
-      value: 'first',
-    },
-    {
-      label: 'Second',
-      value: 'second',
-    },
-    {
-      label: 'Third',
-      value: 'third',
-    },
-  ];
+const Update = () => {
+  let seenColours = [];
+  let items = [];
 
-  return <SelectInput items={items} onSelect={handleSelect} />;
+  colours.forEach(colour => {
+    const name = colour.colour;
+    const hex = colour.hex;
+    if (!seenColours.includes(hex)) {
+      seenColours.push(hex);
+
+      items.push({
+        label: name,
+        value: hex,
+      });
+    }
+  });
+
+  return <SelectInput items={items} />;
 };
 
-render(<Demo />);
+render(<Update />);
