@@ -1,277 +1,58 @@
 [
-  {
-    "colour": "mikado yellow",
-    "hex": "ffc40c",
-    "date": "2019-05-05"
-  },
-  {
-    "colour": "whisper violet",
-    "hex": "e6e6ee",
-    "date": "2019-05-03"
-  },
-  {
-    "colour": "azure blue",
-    "hex": "007fff",
-    "date": "2019-05-01"
-  },
-  {
-    "colour": "imperial red",
-    "hex": "ed2939",
-    "date": "2019-04-30"
-  },
-  {
-    "colour": "chili red",
-    "hex": "e23d28",
-    "date": "2019-04-28"
-  },
-  {
-    "colour": "raisin black",
-    "hex": "242124",
-    "date": "2019-04-27"
-  },
-  {
-    "colour": "pistachio",
-    "hex": "93c572",
-    "date": "2019-04-26"
-  },
-  {
-    "colour": "cinnabar",
-    "hex": "e44d2e",
-    "date": "2019-04-25"
-  },
-  {
-    "colour": "mikado yellow",
-    "hex": "ffc40c",
-    "date": "2019-04-24"
-  },
-  {
-    "colour": "imperial red",
-    "hex": "ed2939",
-    "date": "2019-04-22"
-  },
-  {
-    "colour": "pomp and power",
-    "hex": "86608e",
-    "date": "2019-04-21"
-  },
-  {
-    "colour": "polynesian blue",
-    "hex": "224c98",
-    "date": "2019-04-20"
-  },
-  {
-    "colour": "blue turquoise",
-    "hex": "6aadad",
-    "date": "2019-04-18"
-  },
-  {
-    "colour": "patchwork plum",
-    "hex": "7e696a",
-    "date": "2019-04-16"
-  },
-  {
-    "colour": "cinnabar",
-    "hex": "e44d2e",
-    "date": "2019-04-15"
-  },
-  {
-    "colour": "mikado yellow",
-    "hex": "ffc40c",
-    "date": "2019-04-13"
-  },
-  {
-    "colour": "pistachio",
-    "hex": "93c572",
-    "date": "2019-04-11"
-  },
-  {
-    "colour": "imperial red",
-    "hex": "ed2939",
-    "date": "2019-04-09"
-  },
-  {
-    "colour": "pomp and power",
-    "hex": "86608e",
-    "date": "2019-04-08"
-  },
-  {
-    "colour": "cinnabar",
-    "hex": "e44d2e",
-    "date": "2019-04-05"
-  },
-  {
-    "colour": "pistachio",
-    "hex": "93c572",
-    "date": "2019-04-04"
-  },
-  {
-    "colour": "blue turquoise",
-    "hex": "6aadad",
-    "date": "2019-04-03"
-  },
-  {
-    "colour": "mikado yellow",
-    "hex": "ffc40c",
-    "date": "2019-04-01"
-  },
-  {
-    "colour": "imperial red",
-    "hex": "ed2939",
-    "date": "2019-03-31"
-  },
-  {
-    "colour": "cinnabar",
-    "hex": "e44d2e",
-    "date": "2019-03-30"
-  },
-  {
-    "colour": "azure blue",
-    "hex": "007fff",
-    "date": "2019-03-29"
-  },
-  {
-    "colour": "claret",
-    "hex": "722f37",
-    "date": "2019-03-27"
-  },
-  {
-    "colour": "patchwork plum",
-    "hex": "7e696a",
-    "date": "2019-03-25"
-  },
-  {
-    "colour": "polynesian blue",
-    "hex": "224c98",
-    "date": "2019-03-24"
-  },
-  {
-    "colour": "azure blue",
-    "hex": "007fff",
-    "date": "2019-03-22"
-  },
-  {
-    "colour": "imperial red",
-    "hex": "ed2939",
-    "date": "2019-03-21"
-  },
-  {
-    "colour": "pistachio",
-    "hex": "93c572",
-    "date": "2019-03-20"
-  },
-  {
-    "colour": "blue turquoise",
-    "hex": "6aadad",
-    "date": "2019-03-18"
-  },
-  {
-    "colour": "cinnabar",
-    "hex": "e44d2e",
-    "date": "2019-03-16"
-  },
-  {
-    "colour": "pomp and power",
-    "hex": "86608e",
-    "date": "2019-03-14"
-  },
-  {
-    "colour": "mikado yellow",
-    "hex": "ffc40c",
-    "date": "2019-03-13"
-  },
-  {
-    "colour": "imperial red",
-    "hex": "ed2939",
-    "date": "2019-03-11"
-  },
-  {
-    "colour": "pistachio",
-    "hex": "93c572",
-    "date": "2019-03-09"
-  },
-  {
-    "colour": "blue turquoise",
-    "hex": "6aadad",
-    "date": "2019-03-08"
-  },
-  {
-    "colour": "azure blue",
-    "hex": "007fff",
-    "date": "2019-03-06"
-  },
-  {
-    "colour": "raisin black",
-    "hex": "242124",
-    "date": "2019-03-05"
-  },
-  {
-    "colour": "yale blue",
-    "hex": "0e4d92",
-    "date": "2019-03-03"
-  },
-  {
-    "colour": "patchwork plum",
-    "hex": "7e696a",
-    "date": "2019-03-01"
-  },
-  {
-    "colour": "yale blue",
-    "hex": "0e4d92",
-    "date": "2019-02-28"
-  },
-  {
-    "colour": "pine green",
-    "hex": "01796f",
-    "date": "2019-02-26"
-  },
-  {
-    "colour": "patchwork plum",
-    "hex": "7e696a",
-    "date": "2019-02-24"
-  },
-  {
-    "colour": "blue turquoise",
-    "hex": "6aadad",
-    "date": "2019-02-23"
-  },
-  {
-    "colour": "imperial red",
-    "hex": "ed2939",
-    "date": "2019-02-21"
-  },
-  {
-    "colour": "pistachio",
-    "hex": "93c572",
-    "date": "2019-02-19"
-  },
-  {
-    "colour": "dim grey",
-    "hex": "696969",
-    "date": "2019-02-18"
-  },
-  {
-    "colour": "jam",
-    "hex": "600f0b",
-    "date": "2019-02-15"
-  },
-  {
-    "colour": "polynesian blue",
-    "hex": "224c98",
-    "date": "2019-02-13"
-  },
-  {
-    "colour": "patchwork plum",
-    "hex": "7e696a",
-    "date": "2019-02-10"
-  },
-  {
-    "colour": "claret",
-    "hex": "722f37",
-    "date": "2019-02-09"
-  },
-  {
-    "colour": "blue turquoise",
-    "hex": "6aadad",
-    "date": "2019-02-07"
-  }
+  { "colour": "cinnabar", "hex": "e44d2e", "date": "2019-05-06" },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2019-05-05" },
+  { "colour": "whisper violet", "hex": "e6e6ee", "date": "2019-05-03" },
+  { "colour": "azure blue", "hex": "007fff", "date": "2019-05-01" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2019-04-30" },
+  { "colour": "chili red", "hex": "e23d28", "date": "2019-04-28" },
+  { "colour": "raisin black", "hex": "242124", "date": "2019-04-27" },
+  { "colour": "pistachio", "hex": "93c572", "date": "2019-04-26" },
+  { "colour": "cinnabar", "hex": "e44d2e", "date": "2019-04-25" },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2019-04-24" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2019-04-22" },
+  { "colour": "pomp and power", "hex": "86608e", "date": "2019-04-21" },
+  { "colour": "polynesian blue", "hex": "224c98", "date": "2019-04-20" },
+  { "colour": "blue turquoise", "hex": "6aadad", "date": "2019-04-18" },
+  { "colour": "patchwork plum", "hex": "7e696a", "date": "2019-04-16" },
+  { "colour": "cinnabar", "hex": "e44d2e", "date": "2019-04-15" },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2019-04-13" },
+  { "colour": "pistachio", "hex": "93c572", "date": "2019-04-11" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2019-04-09" },
+  { "colour": "pomp and power", "hex": "86608e", "date": "2019-04-08" },
+  { "colour": "cinnabar", "hex": "e44d2e", "date": "2019-04-05" },
+  { "colour": "pistachio", "hex": "93c572", "date": "2019-04-04" },
+  { "colour": "blue turquoise", "hex": "6aadad", "date": "2019-04-03" },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2019-04-01" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2019-03-31" },
+  { "colour": "cinnabar", "hex": "e44d2e", "date": "2019-03-30" },
+  { "colour": "azure blue", "hex": "007fff", "date": "2019-03-29" },
+  { "colour": "claret", "hex": "722f37", "date": "2019-03-27" },
+  { "colour": "patchwork plum", "hex": "7e696a", "date": "2019-03-25" },
+  { "colour": "polynesian blue", "hex": "224c98", "date": "2019-03-24" },
+  { "colour": "azure blue", "hex": "007fff", "date": "2019-03-22" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2019-03-21" },
+  { "colour": "pistachio", "hex": "93c572", "date": "2019-03-20" },
+  { "colour": "blue turquoise", "hex": "6aadad", "date": "2019-03-18" },
+  { "colour": "cinnabar", "hex": "e44d2e", "date": "2019-03-16" },
+  { "colour": "pomp and power", "hex": "86608e", "date": "2019-03-14" },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2019-03-13" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2019-03-11" },
+  { "colour": "pistachio", "hex": "93c572", "date": "2019-03-09" },
+  { "colour": "blue turquoise", "hex": "6aadad", "date": "2019-03-08" },
+  { "colour": "azure blue", "hex": "007fff", "date": "2019-03-06" },
+  { "colour": "raisin black", "hex": "242124", "date": "2019-03-05" },
+  { "colour": "yale blue", "hex": "0e4d92", "date": "2019-03-03" },
+  { "colour": "patchwork plum", "hex": "7e696a", "date": "2019-03-01" },
+  { "colour": "yale blue", "hex": "0e4d92", "date": "2019-02-28" },
+  { "colour": "pine green", "hex": "01796f", "date": "2019-02-26" },
+  { "colour": "patchwork plum", "hex": "7e696a", "date": "2019-02-24" },
+  { "colour": "blue turquoise", "hex": "6aadad", "date": "2019-02-23" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2019-02-21" },
+  { "colour": "pistachio", "hex": "93c572", "date": "2019-02-19" },
+  { "colour": "dim grey", "hex": "696969", "date": "2019-02-18" },
+  { "colour": "jam", "hex": "600f0b", "date": "2019-02-15" },
+  { "colour": "polynesian blue", "hex": "224c98", "date": "2019-02-13" },
+  { "colour": "patchwork plum", "hex": "7e696a", "date": "2019-02-10" },
+  { "colour": "claret", "hex": "722f37", "date": "2019-02-09" },
+  { "colour": "blue turquoise", "hex": "6aadad", "date": "2019-02-07" }
 ]
