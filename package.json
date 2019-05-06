@@ -21,6 +21,7 @@
     "hex-rgb": "^4.0.0",
     "ink": "^2.1.1",
     "ink-select-input": "^3.1.1",
+    "json-beautify": "^1.1.0",
     "luxon": "^1.11.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
