@@ -8,16 +8,25 @@ import beautify from 'json-beautify';
 
 import colours from '../data/colours.json';
 
-const setCurrentColour = ({ label, value, exit }) => {
+const saveCurrentToDataFile = currentColour => {
   const filePath = path.join(__dirname, '..', 'data', 'colours.json');
-  const today = DateTime.fromObject(new Date()).toFormat('yyyy-MM-dd');
   const colourList = JSON.parse(fs.readFileSync(filePath));
-  colourList.unshift({
-    colour: label,
-    hex: value,
-    date: today,
-  });
+  colourList.unshift(currentColour);
   fs.writeFileSync(filePath, beautify(colourList, null, 2, 100));
+};
+
+const getCurrentColour = (colour, hex) => {
+  const today = DateTime.fromObject(new Date()).toFormat('yyyy-MM-dd');
+  return {
+    colour,
+    hex,
+    date: today,
+  };
+};
+
+const setCurrentColour = ({ label, value, exit }) => {
+  const currentColour = getCurrentColour(label, value);
+  saveCurrentToDataFile(currentColour);
   exit();
 };
 
