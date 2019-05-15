@@ -1,11 +1,11 @@
-import React from 'react';
-import { DateTime } from 'luxon';
+import React from "react";
+import { DateTime } from "luxon";
 
-import counter from '../utils/counter';
-import hexToBrightness from '../utils/hex-to-brightness';
+import counter from "../utils/counter";
+import hexToBrightness from "../utils/hex-to-brightness";
 
-import Stat from './stat.js';
-import styles from './stats.module.css';
+import Stat from "./stat.js";
+import styles from "./stats.module.css";
 
 const wornByCountFunc = (colours, func) => {
   let colourMap = {};
@@ -19,7 +19,7 @@ const wornByCountFunc = (colours, func) => {
   const filteredColoursCount = Object.entries(coloursCount).filter(hasCount);
   const filteredColours = filteredColoursCount.map(d => [
     d[0],
-    colourMap[d[0]],
+    colourMap[d[0]]
   ]);
 
   return filteredColours;
@@ -39,7 +39,7 @@ const wornDurations = coloursWithDate => {
     }
 
     const [lastColour, lastTime] = reversed[i - 1];
-    const format = 'd LLL yyyy';
+    const format = "d LLL yyyy";
     const currentDateTime = DateTime.fromFormat(currentTime, format);
     const lastDateTime = DateTime.fromFormat(lastTime, format);
     let maxDuration = coloursWithDuration[lastColour] || 0;
@@ -74,7 +74,7 @@ const longestWorn = colours => {
   );
   const filteredColours = filteredColoursByDuration.map(d => [
     d[0],
-    colourMap[d[0]],
+    colourMap[d[0]]
   ]);
 
   return filteredColours;
@@ -94,7 +94,7 @@ const brightest = colours => {
   const coloursWithBrightness = colours.map(([name, hex]) => [
     name,
     hex,
-    hexToBrightness(hex),
+    hexToBrightness(hex)
   ]);
   const brightnessValues = coloursWithBrightness.map(
     ([name, hex, brightness]) => brightness
@@ -111,7 +111,7 @@ const darkest = colours => {
   const coloursWithBrightness = colours.map(([name, hex]) => [
     name,
     hex,
-    hexToBrightness(hex),
+    hexToBrightness(hex)
   ]);
   const brightnessValues = coloursWithBrightness.map(
     ([name, hex, brightness]) => brightness

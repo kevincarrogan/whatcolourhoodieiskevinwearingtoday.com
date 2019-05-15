@@ -1,14 +1,14 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import { graphql, Link } from "gatsby";
+import { Helmet } from "react-helmet";
 
-import Hoodie from '../components/hoodie';
+import Hoodie from "../components/hoodie";
 
-import isLightColour from '../utils/is-light-colour';
+import isLightColour from "../utils/is-light-colour";
 
-import '../components/main.css';
+import "../components/main.css";
 
-import metaImage from './meta-image.png';
+import metaImage from "./meta-image.png";
 
 const IndexPage = ({ data }) => {
   const latest = data.current.edges[0].node;
@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
         />
         <meta property="og:description" content={`It's ${colour}`} />
         <meta property="og:image" content={metaImage} />
-        <body className={isLightColour(hex) ? 'light-colour' : 'dark-colour'} />
+        <body className={isLightColour(hex) ? "light-colour" : "dark-colour"} />
       </Helmet>
     </React.Fragment>
   );

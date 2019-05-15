@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import classNames from 'classnames';
+import React, { useState } from "react";
+import classNames from "classnames";
 
-import isLightColour from '../utils/is-light-colour';
-import upperFirst from '../utils/upper-first';
+import isLightColour from "../utils/is-light-colour";
+import upperFirst from "../utils/upper-first";
 
-import styles from './stat.module.css';
+import styles from "./stat.module.css";
 
 const Stat = ({ title, colours }) => {
   const [selected, setSelected] = useState(undefined);
@@ -19,7 +19,7 @@ const Stat = ({ title, colours }) => {
           const className = classNames(styles.colourItem, {
             [styles.colourItemSelected]: hex === selected,
             [styles.colourItemUnselected]:
-              selected !== undefined && hex !== selected,
+              selected !== undefined && hex !== selected
           });
           const onMouseOver = evt => {
             setSelected(hex);
@@ -30,7 +30,7 @@ const Stat = ({ title, colours }) => {
               key={hex}
               style={{
                 backgroundColor: `#${hex}`,
-                color: isLightColour(hex) ? '#666' : '#fff',
+                color: isLightColour(hex) ? "#666" : "#fff"
               }}
               onMouseOver={onMouseOver}
             >

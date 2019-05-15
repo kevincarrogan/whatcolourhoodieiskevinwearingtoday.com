@@ -1,13 +1,13 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import { graphql, Link } from "gatsby";
+import { Helmet } from "react-helmet";
 
-import isLightColour from '../utils/is-light-colour';
+import isLightColour from "../utils/is-light-colour";
 
-import '../components/main.css';
-import '../components/history.css';
+import "../components/main.css";
+import "../components/history.css";
 
-import upperFirst from '../utils/upper-first';
+import upperFirst from "../utils/upper-first";
 
 const HistoryPage = ({ data }) => {
   const latest = data.current.edges[0].node;
@@ -16,20 +16,20 @@ const HistoryPage = ({ data }) => {
 
   return (
     <React.Fragment>
-      <ul style={{ listStyle: 'none', margin: 0, padding: 0, width: '100vw' }}>
+      <ul style={{ listStyle: "none", margin: 0, padding: 0, width: "100vw" }}>
         {colours.map((colour, i) => (
           <li
             style={{
               backgroundColor: `#${colour.node.hex}`,
-              color: isLightColour(colour.node.hex) ? '#666' : '#fff',
-              padding: '1rem 0',
+              color: isLightColour(colour.node.hex) ? "#666" : "#fff",
+              padding: "1rem 0"
             }}
             key={i}
           >
-            <div style={{ fontSize: '4rem', lineHeight: '4rem' }}>
+            <div style={{ fontSize: "4rem", lineHeight: "4rem" }}>
               {upperFirst(colour.node.colour)}
             </div>
-            <div style={{ fontSize: '1.5rem' }}>
+            <div style={{ fontSize: "1.5rem" }}>
               {i === 0 && <Link to="/">Today</Link>}
               {i > 0 && colour.node.date}
             </div>
@@ -48,7 +48,7 @@ const HistoryPage = ({ data }) => {
         />
         <meta charSet="utf-8" />
         <title>History</title>
-        <body className={isLightColour(hex) ? 'light-colour' : 'dark-colour'} />
+        <body className={isLightColour(hex) ? "light-colour" : "dark-colour"} />
       </Helmet>
     </React.Fragment>
   );

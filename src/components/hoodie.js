@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import isLightColour from '../utils/is-light-colour';
+import isLightColour from "../utils/is-light-colour";
 
-import styles from './hoodie.module.css';
+import styles from "./hoodie.module.css";
 
 const Hoodie = ({ colour, hex, children }) => (
   <main
     className={styles.main}
     style={{
       backgroundColor: `#${hex}`,
-      color: isLightColour(hex) ? `#666` : `#fff`,
+      color: isLightColour(hex) ? `#666` : `#fff`
     }}
   >
     <h1>It's {colour}</h1>
@@ -21,7 +21,7 @@ const Hoodie = ({ colour, hex, children }) => (
 
 Hoodie.propTypes = {
   colour: PropTypes.string,
-  hex: PropTypes.string,
+  hex: PropTypes.string
 };
 
 export default Hoodie;

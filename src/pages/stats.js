@@ -1,14 +1,14 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
-import { Helmet } from 'react-helmet';
-import { DateTime } from 'luxon';
+import React from "react";
+import { graphql, Link } from "gatsby";
+import { Helmet } from "react-helmet";
+import { DateTime } from "luxon";
 
-import Stats from '../components/stats';
-import isLightColour from '../utils/is-light-colour';
+import Stats from "../components/stats";
+import isLightColour from "../utils/is-light-colour";
 
-import '../components/main.css';
+import "../components/main.css";
 
-import styles from './stats.module.css';
+import styles from "./stats.module.css";
 
 const StatsPage = ({ data }) => {
   const latest = data.current.edges[0].node;
@@ -16,18 +16,18 @@ const StatsPage = ({ data }) => {
 
   const colours = data.colours.edges.map(item => [
     item.node.colour,
-    item.node.hex,
+    item.node.hex
   ]);
   const coloursWithDate = data.colours.edges.map(item => [
     item.node.colour,
     item.node.hex,
-    item.node.date,
+    item.node.date
   ]);
 
   let coloursByMonth = {};
   data.colours.edges.forEach(item => {
     const { colour, hex, date } = item.node;
-    const format = 'd LLL yyyy';
+    const format = "d LLL yyyy";
     const luxonDate = DateTime.fromFormat(date, format);
 
     let yearMap = coloursByMonth[luxonDate.year];
@@ -40,7 +40,7 @@ const StatsPage = ({ data }) => {
     if (!monthMap) {
       monthMap = {
         colours: [],
-        coloursWithDate: [],
+        coloursWithDate: []
       };
       yearMap[luxonDate.monthLong] = monthMap;
     }
@@ -87,7 +87,7 @@ const StatsPage = ({ data }) => {
         />
         <meta charSet="utf-8" />
         <title>Stats</title>
-        <body className={isLightColour(hex) ? 'light-colour' : 'dark-colour'} />
+        <body className={isLightColour(hex) ? "light-colour" : "dark-colour"} />
       </Helmet>
     </React.Fragment>
   );

@@ -1,4 +1,4 @@
-import hexToBrightness from './hex-to-brightness';
+import hexToBrightness from "./hex-to-brightness";
 
 const isLightColour = hex => hexToBrightness(hex) > 230;
 
