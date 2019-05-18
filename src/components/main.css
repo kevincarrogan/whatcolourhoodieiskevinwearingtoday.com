@@ -13,11 +13,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a,
-a:visited {
-  color: #fff;
-}
-
 .light-colour,
 .light-colour a,
 .light-colour a:visited {

@@ -1,0 +1,23 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.item {
+  padding: 1rem 0;
+}
+
+.colourName {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+.details {
+  font-size: 1.5rem;
+}
+
+.link {
+  color: inherit !important;
+}

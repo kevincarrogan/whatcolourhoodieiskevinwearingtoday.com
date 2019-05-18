@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet";
 
 import isLightColour from "../utils/is-light-colour";
 
+import styles from "./history.module.css";
+
 import "../components/main.css";
 import "../components/history.css";
 
@@ -16,21 +18,25 @@ const HistoryPage = ({ data }) => {
 
   return (
     <React.Fragment>
-      <ul style={{ listStyle: "none", margin: 0, padding: 0, width: "100vw" }}>
+      <ul className={styles.list}>
         {colours.map((colour, i) => (
           <li
+            className={styles.item}
             style={{
               backgroundColor: `#${colour.node.hex}`,
-              color: isLightColour(colour.node.hex) ? "#666" : "#fff",
-              padding: "1rem 0"
+              color: isLightColour(colour.node.hex) ? "#666" : "#fff"
             }}
             key={i}
           >
-            <div style={{ fontSize: "4rem", lineHeight: "4rem" }}>
+            <div className={styles.colourName}>
               {upperFirst(colour.node.colour)}
             </div>
-            <div style={{ fontSize: "1.5rem" }}>
-              {i === 0 && <Link to="/">Today</Link>}
+            <div className={styles.details}>
+              {i === 0 && (
+                <Link className={styles.link} to="/">
+                  Today
+                </Link>
+              )}
               {i > 0 && colour.node.date}
             </div>
           </li>
@@ -48,7 +54,6 @@ const HistoryPage = ({ data }) => {
         />
         <meta charSet="utf-8" />
         <title>History</title>
-        <body className={isLightColour(hex) ? "light-colour" : "dark-colour"} />
       </Helmet>
     </React.Fragment>
   );
