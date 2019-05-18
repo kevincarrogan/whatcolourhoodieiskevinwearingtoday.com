@@ -30,7 +30,7 @@ const PickerPage = () => {
       <Helmet>
         <style type="text/css">{`
           body {
-              background-color: #${hex};
+              background-color: #${validHex};
           }
         `}</style>
         <link
