@@ -1,0 +1,12 @@
+.hexInput {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  color: inherit;
+  font: inherit;
+  width: 300px;
+}
+
+.hexInput:focus {
+  outline: none;
+}
