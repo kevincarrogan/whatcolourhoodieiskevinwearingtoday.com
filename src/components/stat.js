@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 
-import isLightColour from "../utils/is-light-colour";
-import upperFirst from "../utils/upper-first";
+import isLightColour from "utils/is-light-colour";
+import upperFirst from "utils/upper-first";
 
 import styles from "./stat.module.css";
 

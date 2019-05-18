@@ -2,12 +2,12 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
 
-import isLightColour from "../utils/is-light-colour";
+import isLightColour from "utils/is-light-colour";
 
 import styles from "./history.module.css";
 
-import "../components/main.css";
-import "../components/history.css";
+import "components/main.css";
+import "components/history.css";
 
 import upperFirst from "../utils/upper-first";
 

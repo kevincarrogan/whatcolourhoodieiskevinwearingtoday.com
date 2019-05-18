@@ -3,10 +3,10 @@ import { graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
 import { DateTime } from "luxon";
 
-import Stats from "../components/stats";
-import isLightColour from "../utils/is-light-colour";
+import Stats from "components/stats";
+import isLightColour from "utils/is-light-colour";
 
-import "../components/main.css";
+import "components/main.css";
 
 import styles from "./stats.module.css";
 

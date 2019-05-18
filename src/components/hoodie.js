@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import isLightColour from "../utils/is-light-colour";
+import isLightColour from "utils/is-light-colour";
 
 import styles from "./hoodie.module.css";
 

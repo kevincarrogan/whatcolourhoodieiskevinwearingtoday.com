@@ -2,9 +2,9 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
 
-import Hoodie from "../components/hoodie";
+import Hoodie from "components/hoodie";
 
-import "../components/main.css";
+import "components/main.css";
 
 import metaImage from "./meta-image.png";
 

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 
-import isLightColour from "../utils/is-light-colour";
+import isLightColour from "utils/is-light-colour";
 
 import styles from "./picker.module.css";
 
-import "../components/main.css";
+import "components/main.css";
 
 const PickerPage = () => {
   const [hex, setHex] = useState("fff");

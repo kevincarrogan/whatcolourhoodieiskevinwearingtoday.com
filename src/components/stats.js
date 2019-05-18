@@ -1,8 +1,8 @@
 import React from "react";
 import { DateTime } from "luxon";
 
-import counter from "../utils/counter";
-import hexToBrightness from "../utils/hex-to-brightness";
+import counter from "utils/counter";
+import hexToBrightness from "utils/hex-to-brightness";
 
 import Stat from "./stat.js";
 import styles from "./stats.module.css";
