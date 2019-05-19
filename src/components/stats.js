@@ -10,7 +10,7 @@ import {
   first,
   last
 } from "./stat-functions";
-import Stat from "./stat.js";
+import Stat from "./stat";
 import styles from "./stats.module.css";
 
 const Stats = ({ title, colours, coloursWithDate }) => (
