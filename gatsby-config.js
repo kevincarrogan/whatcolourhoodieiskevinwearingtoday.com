@@ -14,6 +14,17 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-remove-serviceworker`,
-    `gatsby-plugin-favicon`
+    `gatsby-plugin-favicon`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Nunito`,
+            variants: [`700`]
+          }
+        ]
+      }
+    }
   ]
 };
