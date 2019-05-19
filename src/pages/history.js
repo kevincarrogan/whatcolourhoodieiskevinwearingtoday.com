@@ -1,46 +1,24 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
-import isLightColour from "utils/is-light-colour";
-import upperFirst from "utils/upper-first";
-
-import styles from "./history.module.css";
+import History from "components/history";
 
 import "components/main.css";
 import "components/history.css";
+
+const colourEdgesToColoursWithDate = edges =>
+  edges.map(({ node }) => [node.hex, node.colour, node.date]);
 
 const HistoryPage = ({ data }) => {
   const latest = data.current.edges[0].node;
   const hex = latest.hex;
   const colours = data.colours.edges;
+  const coloursWithDate = colourEdgesToColoursWithDate(colours);
 
   return (
     <React.Fragment>
-      <ul className={styles.list}>
-        {colours.map((colour, i) => (
-          <li
-            className={styles.item}
-            style={{
-              backgroundColor: `#${colour.node.hex}`,
-              color: isLightColour(colour.node.hex) ? "#666" : "#fff"
-            }}
-            key={i}
-          >
-            <div className={styles.colourName}>
-              {upperFirst(colour.node.colour)}
-            </div>
-            <div className={styles.details}>
-              {i === 0 && (
-                <Link className={styles.link} to="/">
-                  Today
-                </Link>
-              )}
-              {i > 0 && colour.node.date}
-            </div>
-          </li>
-        ))}
-      </ul>
+      <History coloursWithDate={coloursWithDate} />
       <Helmet>
         <style type="text/css">{`
           body {
