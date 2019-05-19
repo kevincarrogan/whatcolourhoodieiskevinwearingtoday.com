@@ -1,10 +1,6 @@
 const path = require("path");
 
 module.exports = {
-  siteMetadata: {
-    colour: `dim grey`,
-    hex: `696969`
-  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
