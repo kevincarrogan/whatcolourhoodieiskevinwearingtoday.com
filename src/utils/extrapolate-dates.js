@@ -1,6 +1,6 @@
-import { DateTime } from 'luxon';
+import { DateTime } from "luxon";
 
-const format = 'd LLL yyyy';
+const format = "d LLL yyyy";
 
 const toDate = d => DateTime.fromFormat(d, format);
 
@@ -8,7 +8,7 @@ const toFormat = s => s.toFormat(format);
 
 const itemDate = item => toDate(item[2]);
 
-export const extrapolateDates = (coloursWithDate, extrapolateToDate) => {
+const extrapolateDates = (coloursWithDate, extrapolateToDate) => {
   let output = [];
   let previousItem = null;
   coloursWithDate.forEach(item => {
@@ -16,12 +16,15 @@ export const extrapolateDates = (coloursWithDate, extrapolateToDate) => {
     if (previousItem) {
       diff = itemDate(previousItem)
         .diff(itemDate(item))
-        .as('days');
+        .as("days");
     } else if (!previousItem && extrapolateToDate) {
-      diff =
-        toDate(extrapolateToDate)
-          .diff(itemDate(item))
-          .as('days') + 1;
+      let date;
+      if (typeof extrapolateToDate === "object") {
+        date = DateTime.fromJSDate(extrapolateToDate);
+      } else {
+        date = toDate(extrapolateToDate);
+      }
+      diff = date.diff(itemDate(item)).as("days") + 1;
     }
     for (let i = 1; i <= diff; i++) {
       const date = DateTime.fromFormat(item[2], format);
@@ -32,3 +35,5 @@ export const extrapolateDates = (coloursWithDate, extrapolateToDate) => {
   });
   return output;
 };
+
+export default extrapolateDates;
