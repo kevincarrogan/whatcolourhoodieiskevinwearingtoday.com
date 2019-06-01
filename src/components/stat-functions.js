@@ -57,6 +57,12 @@ const wornDurations = coloursWithDate => {
 };
 
 export const longestWorn = colours => {
+  if (colours.length === 1) {
+    const [name, hex] = colours[0];
+
+    return [[name, hex]];
+  }
+
   let colourMap = {};
   colours.forEach(([name, hex, _]) => {
     colourMap[name] = hex;
