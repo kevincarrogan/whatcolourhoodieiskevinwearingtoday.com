@@ -1,26 +1,27 @@
-import React from 'react';
-import { render, AppContext, Color, Box } from 'ink';
-import SelectInput from 'ink-select-input';
-import { DateTime } from 'luxon';
-import fs from 'fs';
-import path from 'path';
-import beautify from 'json-beautify';
+import React from "react";
+import { render, AppContext, Color, Box } from "ink";
+import SelectInput from "ink-select-input";
+import { DateTime } from "luxon";
+import fs from "fs";
+import path from "path";
+import beautify from "json-beautify";
 
-import colours from '../data/colours.json';
+import colours from "../data/colours.json";
+import isLightColour from "./is-light-colour";
 
 const saveCurrentToDataFile = currentColour => {
-  const filePath = path.join(__dirname, '..', 'data', 'colours.json');
+  const filePath = path.join(__dirname, "..", "data", "colours.json");
   const colourList = JSON.parse(fs.readFileSync(filePath));
   colourList.unshift(currentColour);
   fs.writeFileSync(filePath, beautify(colourList, null, 2, 100));
 };
 
 const getCurrentColour = (colour, hex) => {
-  const today = DateTime.fromObject(new Date()).toFormat('yyyy-MM-dd');
+  const today = DateTime.fromObject(new Date()).toFormat("yyyy-MM-dd");
   return {
     colour,
     hex,
-    date: today,
+    date: today
   };
 };
 
@@ -31,8 +32,9 @@ const setCurrentColour = ({ label, value, exit }) => {
 };
 
 const ColourItem = ({ label, value }) => {
+  const colour = isLightColour(value) ? "000" : "fff";
   return (
-    <Color hex="#fff" bgHex={`#${value}`}>
+    <Color hex={`#${colour}`} bgHex={`#${value}`}>
       {label}
     </Color>
   );
@@ -53,7 +55,7 @@ const Update = ({ exit }) => {
     items.push({
       label: name,
       value: hex,
-      exit,
+      exit
     });
   });
 
