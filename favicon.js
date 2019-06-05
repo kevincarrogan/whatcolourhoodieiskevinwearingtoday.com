@@ -1,12 +1,12 @@
-const fs = require('fs');
-const path = require('path');
-const Canvas = require('canvas');
+const fs = require("fs");
+const path = require("path");
+const Canvas = require("canvas");
 
-const coloursHistory = require('./data/colours.json');
+const coloursHistory = require("./data/colours.json");
 
 const createImage = (width, height, text, colour, filePath) => {
   const canvas = Canvas.createCanvas(width, height);
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
 
   ctx.fillStyle = `#${colour}`;
   ctx.fillRect(0, 0, canvas.width, canvas.height);

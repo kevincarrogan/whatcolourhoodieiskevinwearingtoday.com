@@ -37,7 +37,7 @@
     "serve": "gatsby serve",
     "test": "jest",
     "now-build": "npm run build",
-    "format": "prettier --write src/**/*.{js,jsx,css}",
+    "format": "prettier --write update-today.js meta-image.js favicon.js src/**/*.{js,jsx,css}",
     "favicon": "node favicon.js",
     "meta-image": "node meta-image",
     "update": "npm run favicon && npm run meta-image && git add . && git commit -m 'Update colour' && git push",
