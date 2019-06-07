@@ -71,3 +71,5 @@ yarn-error.log
 .python-version
 
 built/
+
+.vscode
