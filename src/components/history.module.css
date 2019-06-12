@@ -1,40 +1,21 @@
-.fixedColourName {
-  align-items: center;
-  background-color: transparent;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-}
-
 .list {
+  list-style: none;
   margin: 0;
   padding: 0;
   width: 100vw;
 }
 
 .item {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding: 2rem;
+  padding: 1rem 0;
 }
 
 .colourName {
-  display: none;
   font-size: 4rem;
   line-height: 4rem;
 }
 
 .details {
-  font-size: 3rem;
-  position: sticky;
-  top: 0;
-  text-align: right;
+  font-size: 1.5rem;
 }
 
 .link {

@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
-
-import extrapolateDates from "utils/extrapolate-dates";
 
 import History from "components/history";
 
@@ -17,11 +15,10 @@ const HistoryPage = ({ data }) => {
   const hex = latest.hex;
   const colours = data.colours.edges;
   const coloursWithDate = colourEdgesToColoursWithDate(colours);
-  const extrapolatedColours = extrapolateDates(coloursWithDate, new Date());
 
   return (
     <React.Fragment>
-      <History coloursWithDate={extrapolatedColours} />
+      <History coloursWithDate={coloursWithDate} />
       <Helmet>
         <style type="text/css">{`
           body {
