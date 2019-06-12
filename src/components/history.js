@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 import { Link } from "gatsby";
 
@@ -7,11 +8,10 @@ import upperFirst from "utils/upper-first";
 
 import styles from "./history.module.css";
 
-const between = (val, min, max) => Math.max(Math.min(val, max), min);
-
 const Item = ({ isToday, hex, name, date }) => {
   const fixedColourNameElRef = useRef(null);
   const itemElRef = useRef(null);
+  const [inViewRef, inView] = useInView();
 
   const [pos, setPos] = useState({
     top: 0,
@@ -36,13 +36,17 @@ const Item = ({ isToday, hex, name, date }) => {
       }
     };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    if (inView) {
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    }
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      if (inView) {
+        window.removeEventListener("scroll", onScroll);
+      }
     };
-  }, []);
+  }, [inView]);
 
   return (
     <React.Fragment>
@@ -51,7 +55,9 @@ const Item = ({ isToday, hex, name, date }) => {
         ref={fixedColourNameElRef}
         style={{
           clip: `rect(${pos.top * 100}vh, 100vw, ${pos.bottom * 100}vh, 0px)`,
-          color: isLightColour(hex) ? "#666" : "#fff"
+          display: inView ? "flex" : "none",
+          color: isLightColour(hex) ? "#666" : "#fff",
+          zIndex: 1
         }}
       >
         {upperFirst(name)}
@@ -60,19 +66,25 @@ const Item = ({ isToday, hex, name, date }) => {
         className={styles.item}
         style={{
           backgroundColor: `#${hex}`,
-          color: isLightColour(hex) ? "#666" : "#fff"
+          color: isLightColour(hex) ? "#666" : "#fff",
+          position: "relative"
         }}
-        ref={itemElRef}
+        ref={inViewRef}
       >
-        <div className={styles.colourName}>{upperFirst(name)}</div>
-        <div className={styles.details}>
-          {isToday ? (
-            <Link className={styles.link} to="/">
-              Today
-            </Link>
-          ) : (
-            date
-          )}
+        <div
+          ref={itemElRef}
+          style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }}
+        >
+          <div className={styles.colourName}>{upperFirst(name)}</div>
+          <div className={styles.details}>
+            {isToday ? (
+              <Link className={styles.link} to="/">
+                Today
+              </Link>
+            ) : (
+              date
+            )}
+          </div>
         </div>
       </div>
     </React.Fragment>
