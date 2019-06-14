@@ -22,7 +22,6 @@ const History = ({ coloursWithDate }) => {
           name={colour[1]}
           date={colour[2]}
           position={i}
-          selected={selected}
           setSelected={setSelected}
         />
       ))}
