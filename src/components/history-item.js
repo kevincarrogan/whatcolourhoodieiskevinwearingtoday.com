@@ -8,7 +8,9 @@ import upperFirst from "utils/upper-first";
 
 import styles from "./history-item.module.css";
 
-const HistoryItem = ({ isToday, hex, name, date }) => {
+const between = (min, value, max) => Math.min(Math.max(value, min), max);
+
+const HistoryItem = ({ isToday, hex, name, date, position, setSelected }) => {
   const fixedColourNameElRef = useRef(null);
   const itemElRef = useRef(null);
   const [inViewRef, inView] = useInView();
@@ -26,12 +28,20 @@ const HistoryItem = ({ isToday, hex, name, date }) => {
 
       const { height, top } = itemEl.getBoundingClientRect();
       const diff = height + top;
-      const posTop = (1 / height) * top;
-      const posBottom = (1 / height) * diff;
+      let posTop = (1 / height) * top;
+      let posBottom = (1 / height) * diff;
       if ((posTop <= 1 && posTop >= 0) || (posBottom <= 1 && posBottom >= 0)) {
+        posTop = between(0, posTop, 1);
+        posBottom = between(0, posBottom, 1);
+        if (
+          (posTop === 0 && posBottom >= 0.5) ||
+          (posBottom === 1 && posTop < 0.5)
+        ) {
+          setSelected(position);
+        }
         setPos({
-          top: posTop,
-          bottom: posBottom
+          top: between(0, posTop, 1),
+          bottom: between(0, posBottom, 1)
         });
       }
     };
