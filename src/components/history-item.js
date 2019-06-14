@@ -10,7 +10,15 @@ import styles from "./history-item.module.css";
 
 const between = (min, value, max) => Math.min(Math.max(value, min), max);
 
-const HistoryItem = ({ isToday, hex, name, date, position, setSelected }) => {
+const HistoryItem = ({
+  isToday,
+  hex,
+  name,
+  date,
+  position,
+  selected,
+  setSelected
+}) => {
   const itemElRef = useRef(null);
   const [inViewRef, inView] = useInView();
 
@@ -31,8 +39,9 @@ const HistoryItem = ({ isToday, hex, name, date, position, setSelected }) => {
         posTop = between(0, posTop, 1);
         posBottom = between(0, posBottom, 1);
         if (
-          (posTop === 0 && posBottom >= 0.5) ||
-          (posBottom === 1 && posTop < 0.5)
+          ((posTop === 0 && posBottom >= 0.5) ||
+            (posBottom === 1 && posTop < 0.5)) &&
+          selected !== position
         ) {
           setSelected(position);
         }
@@ -53,7 +62,7 @@ const HistoryItem = ({ isToday, hex, name, date, position, setSelected }) => {
         window.removeEventListener("scroll", onScroll);
       }
     };
-  }, [inView]);
+  }, [inView, selected]);
 
   return (
     <React.Fragment>
