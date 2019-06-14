@@ -11,7 +11,6 @@ import styles from "./history-item.module.css";
 const between = (min, value, max) => Math.min(Math.max(value, min), max);
 
 const HistoryItem = ({ isToday, hex, name, date, position, setSelected }) => {
-  const fixedColourNameElRef = useRef(null);
   const itemElRef = useRef(null);
   const [inViewRef, inView] = useInView();
 
@@ -19,11 +18,9 @@ const HistoryItem = ({ isToday, hex, name, date, position, setSelected }) => {
     top: 0,
     bottom: 0
   });
-  const [ratio, setRatio] = useState(1);
 
   useEffect(() => {
     const onScroll = () => {
-      const fixedColourNameEl = fixedColourNameElRef.current;
       const itemEl = itemElRef.current;
 
       const { height, top } = itemEl.getBoundingClientRect();
@@ -62,7 +59,6 @@ const HistoryItem = ({ isToday, hex, name, date, position, setSelected }) => {
     <React.Fragment>
       <div
         className={styles.fixedColourName}
-        ref={fixedColourNameElRef}
         style={{
           clip: `rect(${pos.top * 100}vh, 100vw, ${pos.bottom * 100}vh, 0px)`,
           display: inView ? "flex" : "none",
