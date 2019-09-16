@@ -1,4 +1,7 @@
 [
+  { "colour": "cinnabar", "hex": "e44d2e", "date": "2019-09-16" },
+  { "colour": "whisper violet", "hex": "e6e6ee", "date": "2019-09-15" },
+  { "colour": "lemon chiffon", "hex": "fffacd", "date": "2019-09-14" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2019-09-12" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2019-09-11" },
   { "colour": "kelp", "hex": "525844", "date": "2019-09-10" },
