@@ -1,6 +1,10 @@
 [
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2019-10-18" },
+  { "colour": "purpureus", "hex": "9a4eae", "date": "2019-10-17" },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2019-10-16" },
   { "colour": "azure blue", "hex": "007fff", "date": "2019-10-15" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2019-10-14" },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2019-10-13" },
   { "colour": "poolside blue", "hex": "21bab5", "date": "2019-10-12" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2019-10-11" },
   { "colour": "chili red", "hex": "e23d28", "date": "2019-10-10" },
