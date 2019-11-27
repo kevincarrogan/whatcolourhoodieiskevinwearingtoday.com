@@ -1,4 +1,6 @@
 [
+  { "colour": "azure blue", "hex": "007fff", "date": "2019-11-27" },
+  { "colour": "pomp and power", "hex": "86608e", "date": "2019-11-26" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2019-11-25" },
   { "colour": "placeholder green", "hex": "0f0", "date": "2019-11-24" },
   { "colour": "purpureus", "hex": "9a4eae", "date": "2019-11-23" },
