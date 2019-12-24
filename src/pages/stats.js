@@ -12,7 +12,7 @@ import styles from "./stats.module.css";
 
 const StatsPage = ({ data }) => {
   const latest = data.current.edges[0].node;
-  const hex = latest.hex;
+  const hex = latest.hex ? latest.hex : "ccc";
 
   const filteredColours = data.colours.edges.filter(item => !!item.node.hex);
 
