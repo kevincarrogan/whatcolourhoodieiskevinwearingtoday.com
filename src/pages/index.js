@@ -12,6 +12,7 @@ const IndexPage = ({ data }) => {
   const latest = data.current.edges[0].node;
   const colour = latest.colour;
   const hex = latest.hex;
+  const title = colour ? `It's ${colour}` : "No hoodie";
 
   return (
     <React.Fragment>
@@ -22,7 +23,7 @@ const IndexPage = ({ data }) => {
       <Helmet>
         <style type="text/css">{`
           body {
-              background-color: #${hex};
+              background-color: #${hex ? hex : "ccc"};
           }
         `}</style>
         <link
@@ -30,7 +31,7 @@ const IndexPage = ({ data }) => {
           rel="stylesheet"
         />
         <meta charSet="utf-8" />
-        <title>It's {colour}</title>
+        <title>{title}</title>
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
@@ -40,7 +41,7 @@ const IndexPage = ({ data }) => {
           property="og:title"
           content="What colour hoodie is Kevin wearing today?"
         />
-        <meta property="og:description" content={`It's ${colour}`} />
+        <meta property="og:description" content={title} />
         <meta property="og:image" content={metaImage} />
       </Helmet>
     </React.Fragment>

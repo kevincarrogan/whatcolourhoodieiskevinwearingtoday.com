@@ -7,11 +7,25 @@ import isLightColour from "utils/is-light-colour";
 import styles from "./hoodie.module.css";
 
 const Hoodie = ({ colour, hex, children }) => {
+  if (!hex) {
+    return (
+      <main
+        className={classNames(styles.main, "dark-colour")}
+        style={{
+          backgroundColor: "#ccc",
+          color: "#fff"
+        }}
+      >
+        <h1>No hoodie</h1>
+        {children}
+      </main>
+    );
+  }
+
   const colourClass = isLightColour(hex) ? "light-colour" : "dark-colour";
-  const classes = classNames(styles.main, colourClass);
   return (
     <main
-      className={classes}
+      className={classNames(styles.main, colourClass)}
       style={{
         backgroundColor: `#${hex}`,
         color: isLightColour(hex) ? `#666` : `#fff`
