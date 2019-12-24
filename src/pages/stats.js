@@ -14,18 +14,20 @@ const StatsPage = ({ data }) => {
   const latest = data.current.edges[0].node;
   const hex = latest.hex;
 
-  const colours = data.colours.edges.map(item => [
+  const filteredColours = data.colours.edges.filter(item => !!item.node.hex);
+
+  const colours = filteredColours.map(item => [
     item.node.colour,
     item.node.hex
   ]);
-  const coloursWithDate = data.colours.edges.map(item => [
+  const coloursWithDate = filteredColours.map(item => [
     item.node.colour,
     item.node.hex,
     item.node.date
   ]);
 
   let coloursByMonth = {};
-  data.colours.edges.forEach(item => {
+  filteredColours.forEach(item => {
     const { colour, hex, date } = item.node;
     const format = "d LLL yyyy";
     const luxonDate = DateTime.fromFormat(date, format);
