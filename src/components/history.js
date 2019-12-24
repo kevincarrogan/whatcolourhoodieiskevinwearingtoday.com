@@ -14,13 +14,13 @@ const History = ({ coloursWithDate }) => {
         coloursWithDate={coloursWithDate}
         selected={selected}
       />
-      {coloursWithDate.map((colour, i) => (
+      {coloursWithDate.map(([hex, name, date], i) => (
         <HistoryItem
           key={i}
           isToday={i === 0}
-          hex={colour[0]}
-          name={colour[1]}
-          date={colour[2]}
+          hex={hex ? hex : "ccc"}
+          name={name ? name : "No hoodie"}
+          date={date}
           position={i}
           setSelected={setSelected}
         />
