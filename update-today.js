@@ -47,6 +47,11 @@ const Update = ({ exit }) => {
   colours.forEach(colour => {
     const name = colour.colour;
     const hex = colour.hex;
+
+    if (!hex) {
+      return;
+    }
+
     if (seenColours.includes(hex)) {
       return;
     }
