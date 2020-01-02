@@ -55,18 +55,20 @@ const StatsPage = ({ data }) => {
     <React.Fragment>
       <section>
         <h1 className={styles.header}>Stats</h1>
-        {Object.entries(coloursByMonth).map(([year, monthData]) => (
-          <React.Fragment key={year}>
-            {Object.entries(monthData).map(([month, data]) => (
-              <Stats
-                key={`${month} ${year}`}
-                title={`${month} ${year}`}
-                colours={data.colours}
-                coloursWithDate={data.coloursWithDate}
-              />
-            ))}
-          </React.Fragment>
-        ))}
+        {Object.entries(coloursByMonth)
+          .sort(([aYear], [bYear]) => bYear - aYear)
+          .map(([year, monthData]) => (
+            <React.Fragment key={year}>
+              {Object.entries(monthData).map(([month, data]) => (
+                <Stats
+                  key={`${month} ${year}`}
+                  title={`${month} ${year}`}
+                  colours={data.colours}
+                  coloursWithDate={data.coloursWithDate}
+                />
+              ))}
+            </React.Fragment>
+          ))}
         <Stats
           title="All Time"
           colours={colours}
