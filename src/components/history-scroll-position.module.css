@@ -26,7 +26,7 @@
 }
 
 .item {
-  height: 4px;
+  height: 2px;
   transition: all 0.1s;
   width: 10px;
 }
