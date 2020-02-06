@@ -101,7 +101,7 @@ export default StatsPage;
 
 export const query = graphql`
   query {
-    current: allColoursJson(limit: 1) {
+    current: allDays(filter: { id: { ne: "dummy" } }, limit: 1) {
       edges {
         node {
           colour
@@ -109,7 +109,7 @@ export const query = graphql`
         }
       }
     }
-    colours: allColoursJson {
+    colours: allDays(filter: { id: { ne: "dummy" } }) {
       edges {
         node {
           colour

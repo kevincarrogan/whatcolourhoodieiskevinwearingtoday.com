@@ -52,7 +52,7 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    current: allColoursJson(limit: 1) {
+    current: allDays(filter: { id: { ne: "dummy" } }, limit: 1) {
       edges {
         node {
           colour
