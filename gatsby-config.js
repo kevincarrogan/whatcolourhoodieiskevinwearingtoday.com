@@ -2,17 +2,9 @@ const path = require("path");
 
 module.exports = {
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: path.join(__dirname, `data`)
-      }
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-json`,
     `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-favicon`,
     {
@@ -24,6 +16,17 @@ module.exports = {
             variants: [`700`]
           }
         ]
+      }
+    },
+    {
+      resolve: "gatsby-source-apiserver",
+      options: {
+        url: `https://api.kevinshoodie.com/days/`,
+        headers: {
+          "Content-Type": "application/json"
+        },
+        name: `days`,
+        entityLevel: `days`
       }
     }
   ]
