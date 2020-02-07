@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { render, AppContext, Color, Box } from "ink";
 import SelectInput from "ink-select-input";
+import Spinner from "ink-spinner";
 import { DateTime } from "luxon";
 import fs from "fs";
 import path from "path";
 import beautify from "json-beautify";
+import fetch from "node-fetch";
 
-import colours from "../data/colours.json";
 import isLightColour from "./is-light-colour";
 
 const saveCurrentToDataFile = currentColour => {
@@ -40,7 +41,30 @@ const ColourItem = ({ label, value }) => {
   );
 };
 
+const Loading = () => (
+  <Box>
+    <Color green>
+      <Spinner type="dots" />
+    </Color>{" "}
+    Loading…
+  </Box>
+);
+
 const Update = ({ exit }) => {
+  const [colours, setColours] = useState(null);
+
+  useEffect(() => {
+    fetch("https://api.kevinshoodie.com/days/")
+      .then(resp => resp.json())
+      .then(resp => resp.days)
+      .then(days => setColours(days))
+      .catch(error => console.error(error));
+  }, []);
+
+  if (!colours) {
+    return <Loading />;
+  }
+
   let seenColours = [];
   let items = [];
 
