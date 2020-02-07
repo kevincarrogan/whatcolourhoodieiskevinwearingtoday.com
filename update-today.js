@@ -12,6 +12,14 @@ import isLightColour from "./is-light-colour";
 
 const API_URL = "https://api.kevinshoodie.com/days/";
 
+const checkResponseStatus = response => {
+  if (!response.ok) {
+    throw Error(response.statusText);
+  }
+
+  return response;
+};
+
 const saveCurrentToDataFile = currentColour => {
   const filePath = path.join(__dirname, "..", "data", "colours.json");
   const colourList = JSON.parse(fs.readFileSync(filePath));
@@ -38,8 +46,9 @@ const getCurrentColour = (colour, hex) => {
 
 const setCurrentColour = (label, value) => {
   const currentColour = getCurrentColour(label, value);
-  saveCurrentToDataFile(currentColour);
-  return postCurrentToAPI(currentColour);
+  return postCurrentToAPI(currentColour)
+    .then(checkResponseStatus)
+    .then(() => saveCurrentToDataFile(currentColour));
 };
 
 const ColourItem = ({ label, value }) => {
@@ -70,6 +79,7 @@ const Update = ({ exit }) => {
 
   useEffect(() => {
     fetch(API_URL)
+      .then(checkResponseStatus)
       .then(resp => resp.json())
       .then(resp => resp.days)
       .then(days => setColours(days))
@@ -115,7 +125,12 @@ const Update = ({ exit }) => {
       items={items}
       onSelect={({ label, value }) => {
         setSaving(true);
-        setCurrentColour(label, value).then(() => exit());
+        setCurrentColour(label, value)
+          .then(() => exit())
+          .catch(error => {
+            console.error(error);
+            exit();
+          });
       }}
       itemComponent={ColourItem}
     />
