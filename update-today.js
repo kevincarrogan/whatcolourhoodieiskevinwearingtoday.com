@@ -10,11 +10,21 @@ import fetch from "node-fetch";
 
 import isLightColour from "./is-light-colour";
 
+const API_URL = "https://api.kevinshoodie.com/days/";
+
 const saveCurrentToDataFile = currentColour => {
   const filePath = path.join(__dirname, "..", "data", "colours.json");
   const colourList = JSON.parse(fs.readFileSync(filePath));
   colourList.unshift(currentColour);
   fs.writeFileSync(filePath, beautify(colourList, null, 2, 100));
+};
+
+const postCurrentToAPI = currentColour => {
+  return fetch(API_URL, {
+    method: "post",
+    body: JSON.stringify(currentColour),
+    headers: { "Content-Type": "application/json" }
+  });
 };
 
 const getCurrentColour = (colour, hex) => {
@@ -26,10 +36,10 @@ const getCurrentColour = (colour, hex) => {
   };
 };
 
-const setCurrentColour = ({ label, value, exit }) => {
+const setCurrentColour = (label, value) => {
   const currentColour = getCurrentColour(label, value);
   saveCurrentToDataFile(currentColour);
-  exit();
+  return postCurrentToAPI(currentColour);
 };
 
 const ColourItem = ({ label, value }) => {
@@ -41,25 +51,37 @@ const ColourItem = ({ label, value }) => {
   );
 };
 
-const Loading = () => (
+const Waiting = ({ children }) => (
   <Box>
     <Color green>
       <Spinner type="dots" />
     </Color>{" "}
-    Loading…
+    {children}
   </Box>
 );
 
+const Loading = () => <Waiting>Loading…</Waiting>;
+
+const Saving = () => <Waiting>Saving…</Waiting>;
+
 const Update = ({ exit }) => {
   const [colours, setColours] = useState(null);
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    fetch("https://api.kevinshoodie.com/days/")
+    fetch(API_URL)
       .then(resp => resp.json())
       .then(resp => resp.days)
       .then(days => setColours(days))
-      .catch(error => console.error(error));
+      .catch(error => {
+        console.error(error);
+        exit();
+      });
   }, []);
+
+  if (saving) {
+    return <Saving />;
+  }
 
   if (!colours) {
     return <Loading />;
@@ -91,7 +113,10 @@ const Update = ({ exit }) => {
   return (
     <SelectInput
       items={items}
-      onSelect={setCurrentColour}
+      onSelect={({ label, value }) => {
+        setSaving(true);
+        setCurrentColour(label, value).then(() => exit());
+      }}
       itemComponent={ColourItem}
     />
   );
