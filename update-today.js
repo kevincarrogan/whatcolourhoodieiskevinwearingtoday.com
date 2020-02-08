@@ -31,7 +31,10 @@ const postCurrentToAPI = currentColour => {
   return fetch(API_URL, {
     method: "post",
     body: JSON.stringify(currentColour),
-    headers: { "Content-Type": "application/json" }
+    headers: {
+      "Content-Type": "application/json",
+      "Api-Key": process.env.API_KEY
+    }
   });
 };
 

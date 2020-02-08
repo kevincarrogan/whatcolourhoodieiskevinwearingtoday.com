@@ -11,6 +11,7 @@
     "canvas": "^2.3.1",
     "classnames": "^2.2.6",
     "color-space": "^1.16.0",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.3.22",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-favicon": "^3.1.6",
@@ -50,7 +51,7 @@
     "update": "npm run favicon && npm run meta-image && git add . && git commit -m 'Update colour' && git push",
     "build-cli": "babel update-today.js src/utils/* --out-dir built",
     "develop-cli": "babel update-today.js src/utils/* --watch --out-dir built",
-    "cli": "node built/update-today.js"
+    "cli": "node -r dotenv/config built/update-today.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
