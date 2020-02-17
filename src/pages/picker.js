@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
+
+import Head from "components/head";
 
 import isLightColour from "utils/is-light-colour";
 
@@ -27,16 +28,7 @@ const PickerPage = () => {
         value={hex}
         onChange={evt => setHex(evt.target.value)}
       />
-      <Helmet>
-        <style type="text/css">{`
-          body {
-              background-color: #${validHex};
-          }
-        `}</style>
-        <meta charSet="utf-8" />
-        <title>Picker</title>
-        <body className={bodyClassName} />
-      </Helmet>
+      <Head bodyClassName={bodyClassName} title="Picker" hex={validHex} />
     </div>
   );
 };

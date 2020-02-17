@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { Helmet } from "react-helmet";
 
+import Head from "components/head";
 import Hoodie from "components/hoodie";
 
 import "components/main.css";
@@ -20,26 +20,12 @@ const IndexPage = ({ data }) => {
         <Link to="/history">History</Link>
         <Link to="/stats">Stats</Link>
       </Hoodie>
-      <Helmet>
-        <style type="text/css">{`
-          body {
-              background-color: #${hex ? hex : "ccc"};
-          }
-        `}</style>
-        <meta charSet="utf-8" />
-        <title>{title}</title>
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://whatcolourhoodieiskevinwearingtoday.com/"
-        />
-        <meta
-          property="og:title"
-          content="What colour hoodie is Kevin wearing today?"
-        />
-        <meta property="og:description" content={title} />
-        <meta property="og:image" content={metaImage} />
-      </Helmet>
+      <Head
+        backgroundColor={hex ? hex : "ccc"}
+        title={title}
+        description={title}
+        metaImage={metaImage}
+      />
     </React.Fragment>
   );
 };

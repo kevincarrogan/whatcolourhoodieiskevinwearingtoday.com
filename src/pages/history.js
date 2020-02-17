@@ -1,10 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Helmet } from "react-helmet";
+
+import Head from "components/head";
+import History from "components/history";
 
 import extrapolateDates from "utils/extrapolate-dates";
-
-import History from "components/history";
 
 import "components/main.css";
 import "components/history.css";
@@ -22,15 +22,7 @@ const HistoryPage = ({ data }) => {
   return (
     <React.Fragment>
       <History coloursWithDate={extrapolatedColours} />
-      <Helmet>
-        <style type="text/css">{`
-          body {
-              background-color: #${hex};
-          }
-        `}</style>
-        <meta charSet="utf-8" />
-        <title>History</title>
-      </Helmet>
+      <Head hex={hex} title="History" />
     </React.Fragment>
   );
 };

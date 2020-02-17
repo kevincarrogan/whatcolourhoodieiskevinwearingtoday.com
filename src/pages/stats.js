@@ -1,9 +1,10 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { Helmet } from "react-helmet";
 import { DateTime } from "luxon";
 
+import Head from "components/head";
 import Stats from "components/stats";
+
 import isLightColour from "utils/is-light-colour";
 
 import "components/main.css";
@@ -79,16 +80,11 @@ const StatsPage = ({ data }) => {
           <Link to="/history">History</Link>
         </div>
       </section>
-      <Helmet>
-        <style type="text/css">{`
-          body {
-              background-color: #${hex};
-          }
-        `}</style>
-        <meta charSet="utf-8" />
-        <title>Stats</title>
-        <body className={isLightColour(hex) ? "light-colour" : "dark-colour"} />
-      </Helmet>
+      <Head
+        hex={hex}
+        title="Stats"
+        bodyClassName={isLightColour(hex) ? "light-colour" : "dark-colour"}
+      />
     </React.Fragment>
   );
 };
