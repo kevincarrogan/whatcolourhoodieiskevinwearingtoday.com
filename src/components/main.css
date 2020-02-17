@@ -2,7 +2,6 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-display: fallback;
   font-family: "Nunito", sans-serif;
   font-size: 80px;
   font-weight: 700;

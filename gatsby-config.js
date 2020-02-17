@@ -15,7 +15,8 @@ module.exports = {
             family: `Nunito`,
             variants: [`700`]
           }
-        ]
+        ],
+        fontDisplay: "fallback"
       }
     },
     {
