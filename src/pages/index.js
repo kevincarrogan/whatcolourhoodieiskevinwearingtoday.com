@@ -34,13 +34,6 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    current: allDays(filter: { id: { ne: "dummy" } }, limit: 1) {
-      edges {
-        node {
-          colour
-          hex
-        }
-      }
-    }
+    ...CurrentFragment
   }
 `;

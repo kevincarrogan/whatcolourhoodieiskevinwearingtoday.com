@@ -5,6 +5,7 @@ import Head from "components/head";
 import History from "components/history";
 
 import extrapolateDates from "utils/extrapolate-dates";
+import "utils/queries";
 
 import "components/main.css";
 import "components/history.css";
@@ -31,22 +32,7 @@ export default HistoryPage;
 
 export const query = graphql`
   query {
-    current: allDays(filter: { id: { ne: "dummy" } }, limit: 1) {
-      edges {
-        node {
-          colour
-          hex
-        }
-      }
-    }
-    colours: allDays(filter: { id: { ne: "dummy" } }) {
-      edges {
-        node {
-          colour
-          hex
-          date(formatString: "D MMM Y")
-        }
-      }
-    }
+    ...CurrentFragment
+    ...ColoursFragment
   }
 `;

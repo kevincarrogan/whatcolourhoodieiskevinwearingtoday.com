@@ -93,22 +93,7 @@ export default StatsPage;
 
 export const query = graphql`
   query {
-    current: allDays(filter: { id: { ne: "dummy" } }, limit: 1) {
-      edges {
-        node {
-          colour
-          hex
-        }
-      }
-    }
-    colours: allDays(filter: { id: { ne: "dummy" } }) {
-      edges {
-        node {
-          colour
-          hex
-          date(formatString: "D MMM Y")
-        }
-      }
-    }
+    ...CurrentFragment
+    ...ColoursFragment
   }
 `;
