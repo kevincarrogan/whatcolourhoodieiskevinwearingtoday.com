@@ -26,10 +26,6 @@ const IndexPage = ({ data }) => {
               background-color: #${hex ? hex : "ccc"};
           }
         `}</style>
-        <link
-          href="https://fonts.googleapis.com/css?family=Nunito:700"
-          rel="stylesheet"
-        />
         <meta charSet="utf-8" />
         <title>{title}</title>
         <meta property="og:type" content="website" />

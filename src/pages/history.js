@@ -28,10 +28,6 @@ const HistoryPage = ({ data }) => {
               background-color: #${hex};
           }
         `}</style>
-        <link
-          href="https://fonts.googleapis.com/css?family=Nunito:700"
-          rel="stylesheet"
-        />
         <meta charSet="utf-8" />
         <title>History</title>
       </Helmet>
