@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
         <Link to="/stats">Stats</Link>
       </Hoodie>
       <Head
-        backgroundColor={hex ? hex : "ccc"}
+        hex={hex ? hex : "ccc"}
         title={title}
         description={title}
         metaImage={metaImage}
