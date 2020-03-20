@@ -1,4 +1,6 @@
 [
+  { "colour": "lemon chiffon", "hex": "fffacd", "date": "2020-03-20" },
+  { "colour": "azure blue", "hex": "007fff", "date": "2020-03-19" },
   { "colour": "cinnabar", "hex": "e44d2e", "date": "2020-03-18" },
   { "colour": "chili red", "hex": "e23d28", "date": "2020-03-17" },
   { "colour": "cinnabar", "hex": "e44d2e", "date": "2020-03-16" },
