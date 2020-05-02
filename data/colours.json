@@ -1,4 +1,7 @@
 [
+  { "colour": "imperial red", "hex": "ed2939", "date": "2020-05-02" },
+  { "colour": "chili red", "hex": "e23d28", "date": "2020-05-01" },
+  { "colour": "cosmic latte", "hex": "fff8e7", "date": "2020-04-30" },
   { "colour": "poolside blue", "hex": "21bab5", "date": "2020-04-29" },
   { "colour": "whisper violet", "hex": "e6e6ee", "date": "2020-04-28" },
   { "colour": "grandad's funeral", "hex": "000", "date": "2020-04-27" },
