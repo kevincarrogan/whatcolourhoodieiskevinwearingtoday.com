@@ -1,4 +1,6 @@
 [
+  { "colour": "chili red", "hex": "e23d28", "date": "2020-05-07" },
+  { "colour": "purpureus", "hex": "9a4eae", "date": "2020-05-06" },
   { "colour": "grandad's funeral", "hex": "000", "date": "2020-05-05" },
   { "colour": "whisper violet", "hex": "e6e6ee", "date": "2020-05-04" },
   { "colour": "fern green", "hex": "497a48", "date": "2020-05-03" },
