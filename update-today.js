@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { render, AppContext, Color, Box } from "ink";
 import SelectInput from "ink-select-input";
 import Spinner from "ink-spinner";
+import TextInput from "ink-text-input";
 import { DateTime } from "luxon";
 import fs from "fs";
 import path from "path";
@@ -38,17 +39,16 @@ const postCurrentToAPI = currentColour => {
   });
 };
 
-const getCurrentColour = (colour, hex) => {
-  const today = DateTime.fromObject(new Date()).toFormat("yyyy-MM-dd");
+const getCurrentColour = (colour, hex, date) => {
   return {
     colour,
     hex,
-    date: today
+    date
   };
 };
 
-const setCurrentColour = (label, value) => {
-  const currentColour = getCurrentColour(label, value);
+const setCurrentColour = (label, value, date) => {
+  const currentColour = getCurrentColour(label, value, date);
   return postCurrentToAPI(currentColour)
     .then(checkResponseStatus)
     .then(() => saveCurrentToDataFile(currentColour));
@@ -72,34 +72,21 @@ const Waiting = ({ children }) => (
   </Box>
 );
 
+const SelectedColour = ({ label, value }) => (
+  <Box>
+    <ColourItem label={label} value={value} />
+  </Box>
+);
+
 const Loading = () => <Waiting>Loading…</Waiting>;
 
 const Saving = () => <Waiting>Saving…</Waiting>;
 
-const Update = ({ exit }) => {
-  const [colours, setColours] = useState(null);
-  const [saving, setSaving] = useState(false);
+const COLOUR_STEP = "COLOUR_STEP";
+const DATE_STEP = "DATE_STEP";
+const STEPS = [COLOUR_STEP, DATE_STEP];
 
-  useEffect(() => {
-    fetch(API_URL)
-      .then(checkResponseStatus)
-      .then(resp => resp.json())
-      .then(resp => resp.days)
-      .then(days => setColours(days))
-      .catch(error => {
-        console.error(error);
-        exit();
-      });
-  }, []);
-
-  if (saving) {
-    return <Saving />;
-  }
-
-  if (!colours) {
-    return <Loading />;
-  }
-
+const getColourItems = colours => {
   let seenColours = [];
   let items = [];
 
@@ -118,26 +105,90 @@ const Update = ({ exit }) => {
     seenColours.push(hex);
     items.push({
       label: name,
-      value: hex,
-      exit
+      value: hex
     });
   });
 
-  return (
-    <SelectInput
-      items={items}
-      onSelect={({ label, value }) => {
-        setSaving(true);
-        setCurrentColour(label, value)
-          .then(() => exit())
-          .catch(error => {
-            console.error(error);
-            exit();
+  return items;
+};
+
+const getTodayValue = () =>
+  DateTime.fromObject(new Date()).toFormat("yyyy-MM-dd");
+
+const Update = ({ exit }) => {
+  const [colours, setColours] = useState(null);
+  const [saving, setSaving] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [payload, setPayload] = useState({});
+  const [step, setStep] = useState(0);
+  const [dateValue, setDateValue] = useState(getTodayValue());
+
+  useEffect(() => {
+    fetch(API_URL)
+      .then(checkResponseStatus)
+      .then(resp => resp.json())
+      .then(resp => resp.days)
+      .then(days => setColours(days))
+      .then(() => setLoading(false))
+      .catch(error => {
+        console.error(error);
+        exit();
+      });
+  }, []);
+
+  if (saving) {
+    return <Saving />;
+  }
+
+  if (loading) {
+    return <Loading />;
+  }
+
+  if (STEPS[step] === COLOUR_STEP) {
+    return (
+      <SelectInput
+        items={getColourItems(colours)}
+        onSelect={({ label, value }) => {
+          setPayload({
+            ...payload,
+            ...{
+              label,
+              value
+            }
           });
-      }}
-      itemComponent={ColourItem}
-    />
-  );
+          setStep(1);
+        }}
+        itemComponent={ColourItem}
+      />
+    );
+  }
+
+  if (STEPS[step] === DATE_STEP) {
+    return (
+      <Box flexDirection="column">
+        <Box>
+          <SelectedColour label={payload.label} value={payload.value} />
+        </Box>
+        <Box>
+          <Box>Enter date: </Box>
+          <TextInput
+            placeholder="yyyy-mm-dd"
+            value={dateValue}
+            onChange={value => setDateValue(value)}
+            onSubmit={value => {
+              setSaving(true);
+              setCurrentColour(payload.label, payload.value, value)
+                .then(() => exit())
+                .catch(error => {
+                  console.error(error);
+                  exit();
+                });
+            }}
+          />
+        </Box>
+      </Box>
+    );
+  }
 };
 
 render(
