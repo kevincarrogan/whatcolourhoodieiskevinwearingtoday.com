@@ -119,7 +119,7 @@ const Update = ({ exit }) => {
   const [colours, setColours] = useState(null);
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [payload, setPayload] = useState({});
+  const [selected, setSelected] = useState([]);
   const [step, setStep] = useState(0);
   const [dateValue, setDateValue] = useState(getTodayValue());
 
@@ -149,13 +149,7 @@ const Update = ({ exit }) => {
       <SelectInput
         items={getColourItems(colours)}
         onSelect={({ label, value }) => {
-          setPayload({
-            ...payload,
-            ...{
-              label,
-              value
-            }
-          });
+          setSelected([label, value]);
           setStep(1);
         }}
         itemComponent={ColourItem}
@@ -164,10 +158,12 @@ const Update = ({ exit }) => {
   }
 
   if (STEPS[step] === DATE_STEP) {
+    const [label, value] = selected;
+
     return (
       <Box flexDirection="column">
         <Box>
-          <SelectedColour label={payload.label} value={payload.value} />
+          <SelectedColour label={label} value={value} />
         </Box>
         <Box>
           <Box>Enter date: </Box>
@@ -175,9 +171,9 @@ const Update = ({ exit }) => {
             placeholder="yyyy-mm-dd"
             value={dateValue}
             onChange={value => setDateValue(value)}
-            onSubmit={value => {
+            onSubmit={date => {
               setSaving(true);
-              setCurrentColour(payload.label, payload.value, value)
+              setCurrentColour(label, value, date)
                 .then(() => exit())
                 .catch(error => {
                   console.error(error);
