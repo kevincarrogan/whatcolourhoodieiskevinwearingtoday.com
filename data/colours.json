@@ -1,5 +1,9 @@
 [
-  { "colour": "placeholder yellow", "hex": "ff0", "date": "2020-07-16" },
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2020-07-16"
+  },
   { "colour": "cinnabar", "hex": "e44d2e", "date": "2020-07-15" },
   { "colour": "chili red", "hex": "e23d28", "date": "2020-07-14" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2020-07-13" },
@@ -21,7 +25,11 @@
   { "colour": "pistachio", "hex": "93c572", "date": "2020-06-27" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2020-06-26" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2020-06-25" },
-  { "colour": "placeholder yellow", "hex": "ff0", "date": "2020-06-24" },
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2020-06-24"
+  },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2020-06-23" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2020-06-22" },
   { "colour": "poolside blue", "hex": "21bab5", "date": "2020-06-21" },
