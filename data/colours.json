@@ -1,4 +1,12 @@
 [
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2020-07-24"
+  },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2020-07-23" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2020-07-22" },
+  { "colour": "lotion pink", "hex": "eccfcf", "date": "2020-07-21" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2020-07-20" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2020-07-19" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2020-07-18" },
