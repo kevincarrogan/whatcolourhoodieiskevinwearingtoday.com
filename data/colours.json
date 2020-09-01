@@ -1,4 +1,6 @@
 [
+  { "colour": "yale blue", "hex": "0e4d92", "date": "2020-09-01" },
+  { "colour": "pomp and power", "hex": "86608e", "date": "2020-08-31" },
   { "colour": "chili red", "hex": "e23d28", "date": "2020-08-30" },
   { "colour": "cinnabar", "hex": "e44d2e", "date": "2020-08-29" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2020-08-28" },
