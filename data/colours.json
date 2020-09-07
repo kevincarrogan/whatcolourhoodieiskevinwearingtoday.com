@@ -1,4 +1,7 @@
 [
+  { "colour": "imperial red", "hex": "ed2939", "date": "2020-09-07" },
+  { "colour": "pigeon blue", "hex": "a9b0c2", "date": "2020-09-06" },
+  { "colour": "lotion pink", "hex": "eccfcf", "date": "2020-09-05" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2020-09-04" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2020-09-03" },
   {
