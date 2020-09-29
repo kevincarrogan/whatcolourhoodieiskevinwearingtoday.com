@@ -1,4 +1,8 @@
 [
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2020-09-29" },
+  { "colour": "persimmon", "hex": "ec5800", "date": "2020-09-28" },
+  { "colour": "lemon chiffon", "hex": "fffacd", "date": "2020-09-27" },
+  { "colour": "cinnabar", "hex": "e44d2e", "date": "2020-09-26" },
   { "colour": "chili red", "hex": "e23d28", "date": "2020-09-25" },
   { "colour": "pigeon blue", "hex": "a9b0c2", "date": "2020-09-24" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2020-09-23" },
