@@ -1,4 +1,7 @@
 [
+  { "colour": "lotion pink", "hex": "eccfcf", "date": "2020-10-05" },
+  { "colour": "chili red", "hex": "e23d28", "date": "2020-10-04" },
+  { "colour": "lemon chiffon", "hex": "fffacd", "date": "2020-10-03" },
   {
     "colour": "psychological primary yellow",
     "hex": "ffd300",
