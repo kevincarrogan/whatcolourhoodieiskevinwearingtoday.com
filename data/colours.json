@@ -1,4 +1,10 @@
 [
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2020-10-31"
+  },
+  { "colour": "persimmon", "hex": "ec5800", "date": "2020-10-30" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2020-10-29" },
   { "colour": "lemon chiffon", "hex": "fffacd", "date": "2020-10-28" },
   { "colour": "poolside blue", "hex": "21bab5", "date": "2020-10-27" },
