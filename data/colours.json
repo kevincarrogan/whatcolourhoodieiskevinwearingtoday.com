@@ -1,4 +1,7 @@
 [
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2020-11-03" },
+  { "colour": "cinnabar", "hex": "e44d2e", "date": "2020-11-02" },
+  { "colour": "cosmic latte", "hex": "fff8e7", "date": "2020-11-01" },
   {
     "colour": "psychological primary yellow",
     "hex": "ffd300",
