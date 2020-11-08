@@ -1,4 +1,6 @@
 [
+  { "colour": "grandad's funeral", "hex": "000", "date": "2020-11-08" },
+  { "colour": "yale blue", "hex": "0e4d92", "date": "2020-11-07" },
   { "colour": "pomp and power", "hex": "86608e", "date": "2020-11-05" },
   { "colour": "pigeon blue", "hex": "a9b0c2", "date": "2020-11-04" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2020-11-03" },
