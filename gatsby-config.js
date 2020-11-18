@@ -8,15 +8,10 @@ module.exports = {
     `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-favicon`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Nunito`,
-            variants: [`700`]
-          }
-        ],
-        fontDisplay: "fallback"
+        fonts: [`Nunito\:700`],
+        display: "fallback"
       }
     },
     {
