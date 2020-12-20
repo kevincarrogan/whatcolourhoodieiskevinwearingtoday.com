@@ -1,4 +1,10 @@
 [
+  { "colour": "cosmic latte", "hex": "fff8e7", "date": "2020-12-20" },
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2020-12-18"
+  },
   { "colour": "purpureus", "hex": "9a4eae", "date": "2020-12-17" },
   { "colour": "chili red", "hex": "e23d28", "date": "2020-12-15" },
   { "colour": "salamander", "hex": "516363", "date": "2020-12-14" },
