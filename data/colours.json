@@ -1,4 +1,11 @@
 [
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2020-12-27"
+  },
+  { "colour": "yale blue", "hex": "0e4d92", "date": "2020-12-26" },
+  { "colour": "pomp and power", "hex": "86608e", "date": "2020-12-25" },
   { "colour": "lotion pink", "hex": "eccfcf", "date": "2020-12-24" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2020-12-23" },
   { "colour": "poolside blue", "hex": "21bab5", "date": "2020-12-22" },
