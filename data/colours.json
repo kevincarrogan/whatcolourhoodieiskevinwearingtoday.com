@@ -1,4 +1,6 @@
 [
+  { "colour": "imperial red", "hex": "ed2939", "date": "2021-01-05" },
+  { "colour": "poolside blue", "hex": "21bab5", "date": "2021-01-04" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2021-01-03" },
   { "colour": "chili red", "hex": "e23d28", "date": "2021-01-01" },
   { "colour": "cinnabar", "hex": "e44d2e", "date": "2020-12-30" },
