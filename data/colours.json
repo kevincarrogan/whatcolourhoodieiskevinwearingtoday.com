@@ -1,4 +1,12 @@
 [
+  { "colour": "imperial red", "hex": "ed2939", "date": "2021-01-13" },
+  { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-01-11" },
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2021-01-08"
+  },
+  { "colour": "pomp and power", "hex": "86608e", "date": "2021-01-07" },
   { "colour": "lotion pink", "hex": "eccfcf", "date": "2021-01-06" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2021-01-05" },
   { "colour": "poolside blue", "hex": "21bab5", "date": "2021-01-04" },
