@@ -1,4 +1,10 @@
 [
+  { "colour": "yale blue", "hex": "0e4d92", "date": "2021-01-25" },
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2021-01-23"
+  },
   { "colour": "imperial red", "hex": "ed2939", "date": "2021-01-22" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-01-20" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2021-01-18" },
