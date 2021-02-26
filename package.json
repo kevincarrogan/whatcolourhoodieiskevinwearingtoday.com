@@ -36,7 +36,8 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
-    "react-intersection-observer": "^8.23.0"
+    "react-intersection-observer": "^8.23.0",
+    "snyk": "^1.460.0"
   },
   "license": "MIT",
   "scripts": {
@@ -52,7 +53,9 @@
     "update": "npm run favicon && npm run meta-image && git add . && git commit -m 'Update colour' && git push",
     "build-cli": "babel update-today.js src/utils/* --out-dir built",
     "develop-cli": "babel update-today.js src/utils/* --watch --out-dir built",
-    "cli": "node -r dotenv/config built/update-today.js"
+    "cli": "node -r dotenv/config built/update-today.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -72,5 +75,6 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+  "snyk": true
 }
