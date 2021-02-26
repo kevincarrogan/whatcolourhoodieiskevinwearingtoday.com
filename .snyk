@@ -14,3 +14,143 @@ patch:
         patched: '2021-02-26T11:18:03.254Z'
     - gatsby > webpack-dev-server > portfinder > async > lodash:
         patched: '2021-02-26T11:18:03.254Z'
+    - gatsby-plugin-favicon > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-plugin-sharp > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > babel-plugin-lodash > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > css-loader > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > devcert > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > eslint > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > eslint-plugin-flowtype > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > webpack-merge > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-plugin-favicon > favicons-webpack-plugin > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-plugin-sharp > async > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > deep-map-keys > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > @typescript-eslint/parser > @typescript-eslint/typescript-estree > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > babel-plugin-lodash > @babel/types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > eslint > table > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > optimize-css-assets-webpack-plugin > last-call-webpack-plugin > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > react-dev-utils > inquirer > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > webpack-dev-server > http-proxy-middleware > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > @typescript-eslint/eslint-plugin > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > @typescript-eslint/parser > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > babel-plugin-lodash > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > webpack-dev-server > portfinder > async > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-plugin-favicon > favicons-webpack-plugin > favicons > cheerio > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-generator > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-traverse > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-template > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > babel-preset-gatsby > @babel/preset-env > @babel/preset-modules > @babel/types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-generator > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-traverse > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-template > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-generator > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-template > babel-traverse > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-traverse > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-template > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > babel-preset-gatsby > @babel/preset-env > @babel/preset-modules > @babel/plugin-proposal-unicode-property-regex > @babel/helper-regex > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby > babel-preset-gatsby > @babel/preset-env > @babel/preset-modules > @babel/plugin-transform-dotall-regex > @babel/helper-regex > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-generator > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-traverse > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-helpers > babel-template > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-template > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-generator > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-template > babel-traverse > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-traverse > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-template > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-generator > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-helpers > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-traverse > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-helpers > babel-template > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-template > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-template > babel-traverse > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
+    - gatsby-source-apiserver > babel-cli > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2021-02-26T11:24:54.088Z'
