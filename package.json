@@ -12,7 +12,7 @@
     "classnames": "^2.2.6",
     "color-space": "^1.16.0",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.3.22",
+    "gatsby": "^2.32.8",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -20,7 +20,7 @@
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^2.0.34",
-    "gatsby-source-apiserver": "^2.1.4",
+    "gatsby-source-apiserver": "^2.1.8",
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-transformer-json": "^2.1.8",
     "gatsby-transformer-sharp": "^2.1.13",
@@ -31,12 +31,13 @@
     "ink-text-input": "^3.2.2",
     "json-beautify": "^1.1.0",
     "luxon": "^1.11.4",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
-    "react-intersection-observer": "^8.23.0"
+    "react-intersection-observer": "^8.23.0",
+    "snyk": "^1.460.0"
   },
   "license": "MIT",
   "scripts": {
@@ -52,7 +53,9 @@
     "update": "npm run favicon && npm run meta-image && git add . && git commit -m 'Update colour' && git push",
     "build-cli": "babel update-today.js src/utils/* --out-dir built",
     "develop-cli": "babel update-today.js src/utils/* --watch --out-dir built",
-    "cli": "node -r dotenv/config built/update-today.js"
+    "cli": "node -r dotenv/config built/update-today.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -72,5 +75,6 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+  "snyk": true
 }
