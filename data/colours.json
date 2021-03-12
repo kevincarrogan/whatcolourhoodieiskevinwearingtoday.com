@@ -1,4 +1,7 @@
 [
+  { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-03-12" },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2021-03-10" },
+  { "colour": "lotion pink", "hex": "eccfcf", "date": "2021-03-08" },
   { "colour": "lemon chiffon", "hex": "fffacd", "date": "2021-03-06" },
   { "colour": "cinnabar", "hex": "e44d2e", "date": "2021-03-04" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2021-03-02" },
