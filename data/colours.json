@@ -1,4 +1,9 @@
 [
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2021-03-26"
+  },
   { "colour": "lotion pink", "hex": "eccfcf", "date": "2021-03-23" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2021-03-22" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2021-03-20" },
