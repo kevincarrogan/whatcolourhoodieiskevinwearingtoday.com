@@ -5,7 +5,7 @@ RUN mkdir config
 RUN npm install
 RUN npm run build
 
-FROM node
+FROM node:alpine
 COPY ./server /app
 COPY --from=builder /app/public /app/public
 COPY --from=builder /app/config /app/config
