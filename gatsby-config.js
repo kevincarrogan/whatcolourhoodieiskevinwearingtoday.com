@@ -24,6 +24,12 @@ module.exports = {
         name: `days`,
         entityLevel: `days`
       }
+    },
+    {
+      resolve: "gatsby-plugin-express",
+      options: {
+        output: "config/gatsby-express.json"
+      }
     }
   ]
 };
