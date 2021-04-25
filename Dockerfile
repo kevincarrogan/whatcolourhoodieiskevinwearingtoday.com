@@ -11,4 +11,5 @@ COPY --from=builder /app/public /app/public
 COPY --from=builder /app/config /app/config
 WORKDIR /app
 RUN npm install
+EXPOSE 80
 CMD ["node", "index.js"]
