@@ -42,7 +42,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "npm run favicon && npm run meta-image && gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -51,7 +51,7 @@
     "format": "prettier --write update-today.js meta-image.js favicon.js src/**/*.{js,jsx,css} data/*.json",
     "favicon": "node favicon.js",
     "meta-image": "node meta-image",
-    "update": "npm run favicon && npm run meta-image && git add . && git commit -m 'Update colour' && git push",
+    "update": "git add . && git commit -m 'Update colour' && git push",
     "build-cli": "babel update-today.js src/utils/* --out-dir built",
     "develop-cli": "babel update-today.js src/utils/* --watch --out-dir built",
     "cli": "node -r dotenv/config built/update-today.js",
