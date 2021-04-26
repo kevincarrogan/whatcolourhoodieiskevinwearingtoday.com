@@ -5,7 +5,7 @@ const Canvas = require("canvas");
 const coloursHistory = require("./data/colours.json");
 
 const fontFile = name => {
-  return path.join(__dirname, "fonts", "nunito", "fonts", "ttf", name);
+  return path.join(__dirname, "fonts", "nunito", "fonts", "TTF", name);
 };
 
 const createImage = (width, height, text, colour, filePath) => {
