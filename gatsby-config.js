@@ -30,6 +30,7 @@ module.exports = {
       options: {
         output: "config/gatsby-express.json"
       }
-    }
+    },
+    `gatsby-plugin-remove-trailing-slashes`
   ]
 };
