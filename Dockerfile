@@ -12,4 +12,4 @@ COPY --from=builder /app/config /app/config
 WORKDIR /app
 RUN npm install
 EXPOSE 80
-CMD ["node", "index.js"]
+CMD ["npx", "pm2-runtime", "index.js"]
