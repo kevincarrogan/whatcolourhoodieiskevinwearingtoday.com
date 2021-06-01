@@ -1,5 +1,6 @@
 [
   { "colour": "persimmon", "hex": "ec5800", "date": "2021-06-01" },
+  { "colour": "placeholder yellow", "hex": "ffff00", "date": "2021-05-30" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2021-05-28" },
   { "colour": "yale blue", "hex": "0e4d92", "date": "2021-05-26" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2021-05-24" },
