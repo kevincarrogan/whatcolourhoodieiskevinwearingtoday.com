@@ -1,4 +1,10 @@
 [
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2021-06-19"
+  },
+  { "colour": "persimmon", "hex": "ec5800", "date": "2021-06-16" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2021-06-14" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-06-12" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2021-06-11" },
