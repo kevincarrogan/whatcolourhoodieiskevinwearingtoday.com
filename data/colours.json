@@ -1,4 +1,13 @@
 [
+  { "colour": "persimmon", "hex": "ec5800", "date": "2021-07-02" },
+  { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-06-30" },
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2021-06-29"
+  },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2021-06-28" },
+  { "colour": "cinnabar", "hex": "e44d2e", "date": "2021-06-27" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2021-06-24" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-06-22" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2021-06-21" },
