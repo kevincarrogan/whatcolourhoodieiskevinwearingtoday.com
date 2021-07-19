@@ -1,4 +1,9 @@
 [
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2021-07-19"
+  },
   { "colour": "pomp and power", "hex": "86608e", "date": "2021-07-16" },
   { "colour": "placeholder yellow", "hex": "ffff00", "date": "2021-07-12" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2021-07-09" },
