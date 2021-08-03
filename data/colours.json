@@ -1,4 +1,10 @@
 [
+  { "colour": "pistachio", "hex": "93c572", "date": "2021-08-03" },
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2021-07-31"
+  },
   { "colour": "blue turquoise", "hex": "6aadad", "date": "2021-07-29" },
   { "colour": "placeholder yellow", "hex": "ffff00", "date": "2021-07-26" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-07-23" },
