@@ -1,10 +1,7 @@
 [
+  { "colour": "persimmon", "hex": "ec5800", "date": "2021-08-17" },
   { "colour": "placeholder yellow", "hex": "ffff00", "date": "2021-08-15" },
-  {
-    "colour": "flecked grey",
-    "hex": "808080",
-    "date": "2021-08-13"
-  },
+  { "colour": "flecked grey", "hex": "808080", "date": "2021-08-13" },
   {
     "colour": "psychological primary yellow",
     "hex": "ffd300",
