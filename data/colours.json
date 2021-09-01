@@ -1,4 +1,9 @@
 [
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2021-08-30"
+  },
   { "colour": "caparol terracotta", "hex": "c45824", "date": "2021-08-28" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2021-08-26" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-08-24" },
