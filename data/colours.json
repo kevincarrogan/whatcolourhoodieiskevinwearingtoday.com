@@ -1,4 +1,8 @@
 [
+  { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-09-11" },
+  { "colour": "blue turquoise", "hex": "6aadad", "date": "2021-09-09" },
+  { "colour": "placeholder yellow", "hex": "ffff00", "date": "2021-09-07" },
+  { "colour": "flecked grey", "hex": "808080", "date": "2021-09-05" },
   { "colour": "caparol terracotta", "hex": "c45824", "date": "2021-09-02" },
   {
     "colour": "psychological primary yellow",
