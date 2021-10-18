@@ -1,4 +1,8 @@
 [
+  { "colour": "grandad's funeral", "hex": "000", "date": "2021-10-18" },
+  { "colour": "flecked grey", "hex": "808080", "date": "2021-10-16" },
+  { "colour": "pistachio", "hex": "93c572", "date": "2021-10-14" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2021-10-13" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2021-10-10" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-10-09" },
   { "colour": "flecked grey", "hex": "808080", "date": "2021-10-06" },
