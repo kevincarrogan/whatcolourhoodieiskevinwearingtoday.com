@@ -79,7 +79,14 @@ const HistoryItem = ({ isToday, hex, name, date, position, setSelected }) => {
       >
         <div
           ref={itemElRef}
-          style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }}
+          style={{
+            position: "absolute",
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: 1
+          }}
         >
           <div className={styles.colourName}>{upperFirst(name)}</div>
           <div className={styles.details}>
