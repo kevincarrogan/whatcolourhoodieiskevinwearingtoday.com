@@ -1,6 +1,12 @@
 [
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2021-10-30"
+  },
+  { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-10-27" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2021-10-25" },
-  { "colour": "cyber yellow", "hex": "ffd300", "date": "2021-10-23" },
+  { "colour": "safety yellow", "hex": "eed202", "date": "2021-10-23" },
   { "colour": "caparol terracotta", "hex": "c45824", "date": "2021-10-21" },
   { "colour": "cinnabar", "hex": "e44d2e", "date": "2021-10-19" },
   { "colour": "grandad's funeral", "hex": "000", "date": "2021-10-18" },
@@ -13,7 +19,7 @@
   { "colour": "caparol terracotta", "hex": "c45824", "date": "2021-10-04" },
   { "colour": "cinnabar", "hex": "e44d2e", "date": "2021-10-01" },
   { "colour": "poolside blue", "hex": "21bab5", "date": "2021-09-28" },
-  { "colour": "cyber yellow", "hex": "ffd300", "date": "2021-09-25" },
+  { "colour": "safety yellow", "hex": "eed202", "date": "2021-09-25" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2021-09-24" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2021-09-22" },
   {
@@ -25,7 +31,7 @@
   { "colour": "caparol terracotta", "hex": "c45824", "date": "2021-09-15" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-09-11" },
   { "colour": "blue turquoise", "hex": "6aadad", "date": "2021-09-09" },
-  { "colour": "cyber yellow", "hex": "ffd300", "date": "2021-09-07" },
+  { "colour": "safety yellow", "hex": "eed202", "date": "2021-09-07" },
   { "colour": "flecked grey", "hex": "808080", "date": "2021-09-05" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2021-09-02" },
   {
@@ -38,7 +44,7 @@
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-08-24" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2021-08-20" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2021-08-17" },
-  { "colour": "cyber yellow", "hex": "ffd300", "date": "2021-08-15" },
+  { "colour": "safety yellow", "hex": "eed202", "date": "2021-08-15" },
   { "colour": "flecked grey", "hex": "808080", "date": "2021-08-13" },
   {
     "colour": "psychological primary yellow",
@@ -56,7 +62,7 @@
     "date": "2021-07-31"
   },
   { "colour": "blue turquoise", "hex": "6aadad", "date": "2021-07-29" },
-  { "colour": "cyber yellow", "hex": "ffd300", "date": "2021-07-26" },
+  { "colour": "safety yellow", "hex": "eed202", "date": "2021-07-26" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2021-07-23" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2021-07-21" },
   {
@@ -65,7 +71,7 @@
     "date": "2021-07-19"
   },
   { "colour": "pomp and power", "hex": "86608e", "date": "2021-07-16" },
-  { "colour": "cyber yellow", "hex": "ffd300", "date": "2021-07-12" },
+  { "colour": "safety yellow", "hex": "eed202", "date": "2021-07-12" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2021-07-09" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2021-07-07" },
   { "colour": "blue turquoise", "hex": "6aadad", "date": "2021-07-05" },
@@ -93,7 +99,7 @@
   { "colour": "persimmon", "hex": "ec5800", "date": "2021-06-07" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2021-06-03" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2021-06-01" },
-  { "colour": "cyber yellow", "hex": "ffd300", "date": "2021-05-30" },
+  { "colour": "safety yellow", "hex": "eed202", "date": "2021-05-30" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2021-05-28" },
   { "colour": "yale blue", "hex": "0e4d92", "date": "2021-05-26" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2021-05-24" },
