@@ -160,3 +160,6 @@ export const birthday = coloursWithDate =>
 
 export const christmas = coloursWithDate =>
   filterByDate({ month: 12, day: 25 }, coloursWithDate);
+
+export const newYear = coloursWithDate =>
+  filterByDate({ month: 1, day: 1 }, coloursWithDate);
