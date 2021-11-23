@@ -14,7 +14,8 @@ import {
   darkest,
   first,
   last,
-  birthday
+  birthday,
+  christmas
 } from "components/stat-functions";
 import isLightColour from "utils/is-light-colour";
 
@@ -91,6 +92,12 @@ const StatsPage = ({ data }) => {
                         colours={birthday(coloursWithDate)}
                       />
                     )}
+                    {month === "December" && (
+                      <Stat
+                        title="Christmas"
+                        colours={christmas(coloursWithDate)}
+                      />
+                    )}
                   </Stats>
                 )
               )}
@@ -106,6 +113,7 @@ const StatsPage = ({ data }) => {
           <Stat title="First" colours={first(colours)} />
           <Stat title="Last" colours={last(colours)} />
           <Stat title="Birthday" colours={birthday(coloursWithDate)} />
+          <Stat title="Christmas" colours={christmas(coloursWithDate)} />
         </Stats>
         <div className={styles.links}>
           <Link to="/">Today</Link>
