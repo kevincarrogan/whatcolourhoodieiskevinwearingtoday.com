@@ -1,6 +1,7 @@
 import { DateTime } from "luxon";
 
 import counter from "utils/counter";
+import extrapolateDates from "utils/extrapolate-dates";
 import hexToBrightness from "utils/hex-to-brightness";
 
 const wornByCountFunc = (colours, func) => {
@@ -131,3 +132,28 @@ export const allColours = uniqueColours;
 export const first = colours => [colours[colours.length - 1]];
 
 export const last = colours => [colours[0]];
+
+export const filterByDate = ({ year, month, day }, coloursWithDate) =>
+  extrapolateDates(coloursWithDate)
+    .slice()
+    .reverse()
+    .filter(([, , date]) => {
+      let matches = true;
+      const dateObj = DateTime.fromFormat(date, "d LLL yyyy");
+
+      if (year) {
+        matches = matches && year === dateObj.year;
+      }
+      if (month) {
+        matches = matches && month === dateObj.month;
+      }
+      if (day) {
+        matches = matches && day === dateObj.day;
+      }
+
+      return matches;
+    })
+    .map(([name, hex]) => [name, hex]);
+
+export const birthday = coloursWithDate =>
+  filterByDate({ month: 11, day: 7 }, coloursWithDate);

@@ -3,8 +3,19 @@ import { graphql, Link } from "gatsby";
 import { DateTime } from "luxon";
 
 import Head from "components/head";
+import Stat from "components/stat";
 import Stats from "components/stats";
-
+import {
+  allColours,
+  longestWorn,
+  mostWorn,
+  leastWorn,
+  brightest,
+  darkest,
+  first,
+  last,
+  birthday
+} from "components/stat-functions";
 import isLightColour from "utils/is-light-colour";
 
 import "components/main.css";
@@ -60,21 +71,42 @@ const StatsPage = ({ data }) => {
           .sort(([aYear], [bYear]) => bYear - aYear)
           .map(([year, monthData]) => (
             <React.Fragment key={year}>
-              {Object.entries(monthData).map(([month, data]) => (
-                <Stats
-                  key={`${month} ${year}`}
-                  title={`${month} ${year}`}
-                  colours={data.colours}
-                  coloursWithDate={data.coloursWithDate}
-                />
-              ))}
+              {Object.entries(monthData).map(
+                ([month, { colours, coloursWithDate }]) => (
+                  <Stats key={`${month} ${year}`} title={`${month} ${year}`}>
+                    <Stat title="All" colours={allColours(colours)} />
+                    <Stat
+                      title="Longest worn"
+                      colours={longestWorn(coloursWithDate)}
+                    />
+                    <Stat title="Most worn" colours={mostWorn(colours)} />
+                    <Stat title="Least worn" colours={leastWorn(colours)} />
+                    <Stat title="Brightest" colours={brightest(colours)} />
+                    <Stat title="Darkest" colours={darkest(colours)} />
+                    <Stat title="First" colours={first(colours)} />
+                    <Stat title="Last" colours={last(colours)} />
+                    {month === "November" && (
+                      <Stat
+                        title="Birthday"
+                        colours={birthday(coloursWithDate)}
+                      />
+                    )}
+                  </Stats>
+                )
+              )}
             </React.Fragment>
           ))}
-        <Stats
-          title="All Time"
-          colours={colours}
-          coloursWithDate={coloursWithDate}
-        />
+        <Stats title="All Time">
+          <Stat title="All" colours={allColours(colours)} />
+          <Stat title="Longest worn" colours={longestWorn(coloursWithDate)} />
+          <Stat title="Most worn" colours={mostWorn(colours)} />
+          <Stat title="Least worn" colours={leastWorn(colours)} />
+          <Stat title="Brightest" colours={brightest(colours)} />
+          <Stat title="Darkest" colours={darkest(colours)} />
+          <Stat title="First" colours={first(colours)} />
+          <Stat title="Last" colours={last(colours)} />
+          <Stat title="Birthday" colours={birthday(coloursWithDate)} />
+        </Stats>
         <div className={styles.links}>
           <Link to="/">Today</Link>
           <Link to="/history">History</Link>
