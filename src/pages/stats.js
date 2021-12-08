@@ -74,39 +74,36 @@ const StatsPage = ({ data }) => {
           .map(([year, monthData]) => (
             <React.Fragment key={year}>
               {Object.entries(monthData).map(
-                ([month, { colours, coloursWithDate }]) => (
-                  <Stats key={`${month} ${year}`} title={`${month} ${year}`}>
-                    <Stat title="All" colours={allColours(colours)} />
-                    <Stat
-                      title="Longest worn"
-                      colours={longestWorn(coloursWithDate)}
-                    />
-                    <Stat title="Most worn" colours={mostWorn(colours)} />
-                    <Stat title="Least worn" colours={leastWorn(colours)} />
-                    <Stat title="Brightest" colours={brightest(colours)} />
-                    <Stat title="Darkest" colours={darkest(colours)} />
-                    <Stat title="First" colours={first(colours)} />
-                    <Stat title="Last" colours={last(colours)} />
-                    {month === "January" && (
+                ([month, { colours, coloursWithDate }]) => {
+                  const newYearColours = newYear(coloursWithDate);
+                  const birthdayColours = birthday(coloursWithDate);
+                  const christmasColours = christmas(coloursWithDate);
+
+                  return (
+                    <Stats key={`${month} ${year}`} title={`${month} ${year}`}>
+                      <Stat title="All" colours={allColours(colours)} />
                       <Stat
-                        title="New Year"
-                        colours={newYear(coloursWithDate)}
+                        title="Longest worn"
+                        colours={longestWorn(coloursWithDate)}
                       />
-                    )}
-                    {month === "November" && (
-                      <Stat
-                        title="Birthday"
-                        colours={birthday(coloursWithDate)}
-                      />
-                    )}
-                    {month === "December" && (
-                      <Stat
-                        title="Christmas"
-                        colours={christmas(coloursWithDate)}
-                      />
-                    )}
-                  </Stats>
-                )
+                      <Stat title="Most worn" colours={mostWorn(colours)} />
+                      <Stat title="Least worn" colours={leastWorn(colours)} />
+                      <Stat title="Brightest" colours={brightest(colours)} />
+                      <Stat title="Darkest" colours={darkest(colours)} />
+                      <Stat title="First" colours={first(colours)} />
+                      <Stat title="Last" colours={last(colours)} />
+                      {newYearColours.length > 0 && (
+                        <Stat title="New Year" colours={newYearColours} />
+                      )}
+                      {birthdayColours.length > 0 && (
+                        <Stat title="Birthday" colours={birthdayColours} />
+                      )}
+                      {christmasColours.length > 0 && (
+                        <Stat title="Christmas" colours={christmasColours} />
+                      )}
+                    </Stats>
+                  );
+                }
               )}
             </React.Fragment>
           ))}
