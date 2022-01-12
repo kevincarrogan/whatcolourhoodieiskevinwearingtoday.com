@@ -1,4 +1,6 @@
 [
+  { "colour": "dim grey", "hex": "696969", "date": "2022-01-11" },
+  { "colour": "safety yellow", "hex": "eed202", "date": "2022-01-08" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2022-01-04" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2022-01-03" },
   { "colour": "flecked grey", "hex": "808080", "date": "2022-01-02" },
