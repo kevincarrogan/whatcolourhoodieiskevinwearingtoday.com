@@ -1,5 +1,4 @@
 .wrapper {
-  align-items: center;
   bottom: 0;
   display: flex;
   justify-content: flex-start;
@@ -16,7 +15,7 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   list-style: none;
   margin: 0;
-  padding: 8px 4px 8px 0;
+  padding: 2px 2px 2px 0;
   transition: background-color 0.1s;
   width: 20px;
 }
