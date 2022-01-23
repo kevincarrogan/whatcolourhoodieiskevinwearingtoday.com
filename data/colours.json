@@ -1,4 +1,7 @@
 [
+  { "colour": "persimmon", "hex": "ec5800", "date": "2022-01-21" },
+  { "colour": "caparol terracotta", "hex": "c45824", "date": "2022-01-20" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2022-01-18" },
   { "colour": "butterscotch", "hex": "ce925b", "date": "2022-01-16" },
   { "colour": "azure blue", "hex": "007fff", "date": "2022-01-13" },
   { "colour": "dim grey", "hex": "696969", "date": "2022-01-11" },
