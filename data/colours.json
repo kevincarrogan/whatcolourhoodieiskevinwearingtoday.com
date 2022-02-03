@@ -1,4 +1,6 @@
 [
+  { "colour": "azure blue", "hex": "007fff", "date": "2022-02-02" },
+  { "colour": "butterscotch", "hex": "ce925b", "date": "2022-01-31" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2022-01-29" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2022-01-27" },
   { "colour": "cinnabar", "hex": "e44d2e", "date": "2022-01-24" },
