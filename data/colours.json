@@ -1,11 +1,12 @@
 [
+  { "colour": "aquamarine blue", "hex": "84dde2", "date": "2022-03-22" },
   { "colour": "pomp and power", "hex": "86608e", "date": "2022-03-20" },
   {
     "colour": "psychological primary yellow",
     "hex": "ffd300",
     "date": "2022-03-19"
   },
-  { "colour": "new light blue", "hex": "00f", "date": "2022-03-16" },
+  { "colour": "aquamarine blue", "hex": "84dde2", "date": "2022-03-16" },
   { "colour": "poolside blue", "hex": "21bab5", "date": "2022-03-14" },
   { "colour": "azure blue", "hex": "007fff", "date": "2022-03-12" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2022-03-10" },
@@ -13,7 +14,7 @@
   { "colour": "caparol terracotta", "hex": "c45824", "date": "2022-03-05" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2022-03-02" },
   { "colour": "azure blue", "hex": "007fff", "date": "2022-02-27" },
-  { "colour": "new light blue", "hex": "00f", "date": "2022-02-24" },
+  { "colour": "aquamarine blue", "hex": "84dde2", "date": "2022-02-24" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2022-02-20" },
   {
     "colour": "psychological primary yellow",
