@@ -1,4 +1,10 @@
 [
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2022-05-16" },
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2022-05-14"
+  },
   { "colour": "flecked grey", "hex": "808080", "date": "2022-05-12" },
   { "colour": "azure blue", "hex": "007fff", "date": "2022-05-09" },
   { "colour": "pistachio", "hex": "93c572", "date": "2022-05-07" },
