@@ -1,4 +1,6 @@
 [
+  { "colour": "safety yellow", "hex": "eed202", "date": "2022-06-20" },
+  { "colour": "poolside blue", "hex": "21bab5", "date": "2022-06-17" },
   { "colour": "flecked grey", "hex": "808080", "date": "2022-06-15" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2022-06-13" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2022-06-10" },
