@@ -1,4 +1,7 @@
 [
+  { "colour": "poolside blue", "hex": "21bab5", "date": "2022-11-13" },
+  { "colour": "azure blue", "hex": "007fff", "date": "2022-11-08" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2022-11-04" },
   { "colour": "caparol terracotta", "hex": "c45824", "date": "2022-10-30" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2022-10-26" },
   { "colour": "butterscotch", "hex": "ce925b", "date": "2022-10-22" },
