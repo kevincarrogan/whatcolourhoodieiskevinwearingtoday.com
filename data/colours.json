@@ -1,4 +1,8 @@
 [
+  { "colour": "butterscotch", "hex": "ce925b", "date": "2022-12-01" },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2022-11-28" },
+  { "colour": "caparol terracotta", "hex": "c45824", "date": "2022-11-27" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2022-11-25" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2022-11-22" },
   { "colour": "safety yellow", "hex": "eed202", "date": "2022-11-21" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2022-11-16" },
