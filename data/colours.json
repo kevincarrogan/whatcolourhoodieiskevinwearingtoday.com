@@ -1,4 +1,9 @@
 [
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2022-12-05"
+  },
   { "colour": "butterscotch", "hex": "ce925b", "date": "2022-12-01" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2022-11-28" },
   { "colour": "caparol terracotta", "hex": "c45824", "date": "2022-11-27" },
