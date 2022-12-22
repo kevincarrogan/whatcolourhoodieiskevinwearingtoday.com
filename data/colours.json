@@ -1,4 +1,8 @@
 [
+  { "colour": "persimmon", "hex": "ec5800", "date": "2022-12-22" },
+  { "colour": "butterscotch", "hex": "ce925b", "date": "2022-12-20" },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2022-12-18" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2022-12-13" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2022-12-08" },
   {
     "colour": "psychological primary yellow",
