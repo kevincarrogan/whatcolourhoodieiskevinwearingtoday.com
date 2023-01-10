@@ -1,4 +1,10 @@
 [
+  { "colour": "safety yellow", "hex": "eed202", "date": "2023-01-09" },
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2023-01-05" },
+  { "colour": "butterscotch", "hex": "ce925b", "date": "2023-01-02" },
+  { "colour": "cosmic latte", "hex": "fff8e7", "date": "2022-12-31" },
+  { "colour": "poolside blue", "hex": "21bab5", "date": "2022-12-28" },
+  { "colour": "placeholder blue", "hex": "00f", "date": "2022-12-25" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2022-12-22" },
   { "colour": "butterscotch", "hex": "ce925b", "date": "2022-12-20" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2022-12-18" },
