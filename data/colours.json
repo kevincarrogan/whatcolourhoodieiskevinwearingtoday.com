@@ -1,4 +1,7 @@
 [
+  { "colour": "twilight blue", "hex": "3d50a5", "date": "2023-02-04" },
+  { "colour": "caparol terracotta", "hex": "c45824", "date": "2023-02-02" },
+  { "colour": "butterscotch", "hex": "ce925b", "date": "2023-01-29" },
   { "colour": "imperial red", "hex": "ed2939", "date": "2023-01-25" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2023-01-23" },
   {
@@ -16,7 +19,7 @@
   { "colour": "butterscotch", "hex": "ce925b", "date": "2023-01-02" },
   { "colour": "cosmic latte", "hex": "fff8e7", "date": "2022-12-31" },
   { "colour": "poolside blue", "hex": "21bab5", "date": "2022-12-28" },
-  { "colour": "placeholder blue", "hex": "00f", "date": "2022-12-25" },
+  { "colour": "twilight blue", "hex": "3d50a5", "date": "2022-12-25" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2022-12-22" },
   { "colour": "butterscotch", "hex": "ce925b", "date": "2022-12-20" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2022-12-18" },
