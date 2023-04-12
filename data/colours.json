@@ -1,4 +1,11 @@
 [
+  { "colour": "safety yellow", "hex": "eed202", "date": "2023-04-11" },
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2023-04-08"
+  },
+  { "colour": "twilight blue", "hex": "3d50a5", "date": "2023-04-05" },
   { "colour": "poolside blue", "hex": "21bab5", "date": "2023-04-03" },
   { "colour": "persimmon", "hex": "ec5800", "date": "2023-03-30" },
   { "colour": "caparol terracotta", "hex": "c45824", "date": "2023-03-27" },
