@@ -1,4 +1,10 @@
 [
+  { "colour": "cinnabar", "hex": "e44d2e", "date": "2023-04-24" },
+  {
+    "colour": "psychological primary yellow",
+    "hex": "ffd300",
+    "date": "2023-04-22"
+  },
   { "colour": "yale blue", "hex": "0e4d92", "date": "2023-04-19" },
   { "colour": "cinnabar", "hex": "e44d2e", "date": "2023-04-15" },
   { "colour": "safety yellow", "hex": "eed202", "date": "2023-04-11" },
