@@ -1,4 +1,8 @@
 [
+  { "colour": "mikado yellow", "hex": "ffc40c", "date": "2023-08-01" },
+  { "colour": "imperial red", "hex": "ed2939", "date": "2023-07-25" },
+  { "colour": "azure blue", "hex": "007fff", "date": "2023-07-18" },
+  { "colour": "cinnabar", "hex": "e44d2e", "date": "2023-07-14" },
   { "colour": "mikado yellow", "hex": "ffc40c", "date": "2023-07-08" },
   { "colour": "safety yellow", "hex": "eed202", "date": "2023-07-05" },
   { "colour": "pistachio", "hex": "93c572", "date": "2023-07-03" },
