@@ -39,7 +39,7 @@
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
     "react-intersection-observer": "^8.23.0",
-    "snyk": "^1.518.0"
+    "snyk": "^1.1024.0"
   },
   "license": "MIT",
   "scripts": {
