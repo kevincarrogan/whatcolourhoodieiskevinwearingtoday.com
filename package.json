@@ -8,11 +8,11 @@
     "node": "14.x"
   },
   "dependencies": {
-    "canvas": "^2.3.1",
+    "canvas": "^2.8.0",
     "classnames": "^2.2.6",
     "color-space": "^1.16.0",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.32.8",
+    "gatsby": "^4.0.0",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-express": "^1.1.6",
     "gatsby-plugin-favicon": "^3.1.6",
