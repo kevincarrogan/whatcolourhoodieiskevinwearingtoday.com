@@ -8,11 +8,11 @@
     "node": "14.x"
   },
   "dependencies": {
-    "canvas": "^2.3.1",
+    "canvas": "^2.8.0",
     "classnames": "^2.2.6",
     "color-space": "^1.16.0",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.32.8",
+    "gatsby": "^4.0.0",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-express": "^1.1.6",
     "gatsby-plugin-favicon": "^3.1.6",
@@ -21,11 +21,11 @@
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-remove-trailing-slashes": "^3.3.0",
-    "gatsby-plugin-sharp": "^2.6.31",
+    "gatsby-plugin-sharp": "^3.15.0",
     "gatsby-source-apiserver": "^2.1.8",
     "gatsby-source-filesystem": "^2.1.16",
     "gatsby-transformer-json": "^2.1.8",
-    "gatsby-transformer-sharp": "^2.1.13",
+    "gatsby-transformer-sharp": "^2.11.0",
     "hex-rgb": "^4.0.0",
     "ink": "^2.1.1",
     "ink-select-input": "^3.1.1",
@@ -39,7 +39,7 @@
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
     "react-intersection-observer": "^8.23.0",
-    "snyk": "^1.518.0"
+    "snyk": "^1.996.0"
   },
   "license": "MIT",
   "scripts": {
