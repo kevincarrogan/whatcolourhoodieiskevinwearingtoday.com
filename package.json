@@ -12,7 +12,7 @@
     "classnames": "^2.2.6",
     "color-space": "^1.16.0",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.32.8",
+    "gatsby": "^3.13.0",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-express": "^1.1.6",
     "gatsby-plugin-favicon": "^3.1.6",
@@ -27,7 +27,7 @@
     "gatsby-transformer-json": "^2.1.8",
     "gatsby-transformer-sharp": "^2.1.13",
     "hex-rgb": "^4.0.0",
-    "ink": "^2.1.1",
+    "ink": "^3.0.9",
     "ink-select-input": "^3.1.1",
     "ink-spinner": "^3.0.1",
     "ink-text-input": "^3.2.2",
@@ -39,7 +39,7 @@
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
     "react-intersection-observer": "^8.23.0",
-    "snyk": "^1.518.0"
+    "snyk": "^1.685.0"
   },
   "license": "MIT",
   "scripts": {
